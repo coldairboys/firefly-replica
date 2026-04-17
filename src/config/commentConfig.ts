@@ -49,11 +49,11 @@ export const commentConfig: CommentConfig = {
 		// 设置 Giscus 评论系统仓库
 		repo: "coldairboys/firefly-replica",
 		// 设置 Giscus 评论系统仓库ID
-		repoId: "REPLACE_WITH_GISCUS_REPO_ID",
+		repoId: "R_kgDOSE9YZw",
 		// 设置 Giscus 评论系统分类
 		category: "General",
 		// 获取 Giscus 评论系统分类ID
-		categoryId: "REPLACE_WITH_GISCUS_CATEGORY_ID",
+		categoryId: "DIC_kwDOSE9YZ84C7CwV",
 		// 获取 Giscus 评论系统映射方式
 		mapping: "pathname",
 		// 获取 Giscus 评论系统严格模式
@@ -63,7 +63,7 @@ export const commentConfig: CommentConfig = {
 		// 获取 Giscus 评论系统元数据功能
 		emitMetadata: "0",
 		// 获取 Giscus 评论系统输入位置
-		inputPosition: "top",
+		inputPosition: "bottom",
 		// 获取 Giscus 评论系统语言
 		lang: "zh-CN",
 		// 获取 Giscus 评论系统加载方式
