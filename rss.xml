@@ -1,2 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy&apos;学习笔记</title><description>第一篇博客</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年4月17日 15:58:31</lastBuildDate><item><title>第一篇博客</title><link>https://blogboy.eu.cc/posts/first-post/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/first-post/</guid><description>这是 Coldairboy&apos;学习笔记 的第一篇博客，用来记录新的开始。</description><pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;欢迎来到 &lt;strong&gt;Coldairboy’学习笔记&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这是新博客中的第一篇文章，后续会在这里持续记录学习过程、使用心得和一些日常折腾内容。&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy&apos;学习笔记</title><description>第一篇博客</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年4月17日 20:59:47</lastBuildDate><item><title>博客首页顶部轮播图片配置</title><link>https://blogboy.eu.cc/posts/first-post/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/first-post/</guid><description>博客首页顶部轮播图片配置教程。</description><pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;博客首页顶部轮播图片配置&lt;a href=&quot;#博客首页顶部轮播图片配置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h2&gt;图片位置&lt;a href=&quot;#图片位置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;首页顶部轮播图片分为移动端和桌面端两个版本：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;端&lt;/th&gt;&lt;th&gt;路径&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;移动端&lt;/td&gt;&lt;td&gt;&lt;code&gt;src/assets/images/MobileWallpaper/&lt;/code&gt;&lt;/td&gt;&lt;td&gt;手机/平板等移动设备显示&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;桌面端&lt;/td&gt;&lt;td&gt;&lt;code&gt;src/assets/images/DesktopWallpaper/&lt;/code&gt;&lt;/td&gt;&lt;td&gt;电脑等桌面设备显示&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;配置文件位置&lt;a href=&quot;#配置文件位置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;src/config/backgroundWallpaper.ts&lt;/code&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;配置说明&lt;a href=&quot;#配置说明&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;desktop&lt;/span&gt;&lt;span&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/DesktopWallpaper/d1.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/DesktopWallpaper/d2.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/DesktopWallpaper/d3.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/DesktopWallpaper/d4.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;mobile&lt;/span&gt;&lt;span&gt;: [&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/MobileWallpaper/m1.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/MobileWallpaper/m2.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/MobileWallpaper/m3.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;        &lt;/span&gt;&lt;span&gt;&quot;assets/images/MobileWallpaper/m4.avif&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;图片格式要求&lt;a href=&quot;#图片格式要求&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;推荐格式：AVIF&lt;a href=&quot;#推荐格式avif&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：更高的压缩率，更小的文件体积，支持透明度和 HDR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兼容性&lt;/strong&gt;：现代浏览器普遍支持&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;推荐工具：Squoosh&lt;a href=&quot;#推荐工具squoosh&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;在线图片转换工具：&lt;strong&gt;&lt;a href=&quot;https://squoosh.app/&quot; target=&quot;_blank&quot;&gt;https://squoosh.app/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;使用步骤：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;打开 Squoosh 网站&lt;/li&gt;
+&lt;li&gt;将你的图片拖入页面&lt;/li&gt;
+&lt;li&gt;在左侧面板选择输出格式为 &lt;strong&gt;AVIF&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;调整质量滑块（建议 75-85%）&lt;/li&gt;
+&lt;li&gt;点击下载按钮&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;其他可选工具&lt;a href=&quot;#其他可选工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;工具&lt;/th&gt;&lt;th&gt;网址&lt;/th&gt;&lt;th&gt;特点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;CloudConvert&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://cloudconvert.com/&quot; target=&quot;_blank&quot;&gt;https://cloudconvert.com/&lt;/a&gt;&lt;/td&gt;&lt;td&gt;支持批量转换，格式全面&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Convertio&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://convertio.co/&quot; target=&quot;_blank&quot;&gt;https://convertio.co/&lt;/a&gt;&lt;/td&gt;&lt;td&gt;界面简洁，操作方便&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ezGIF&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://ezgif.com/&quot; target=&quot;_blank&quot;&gt;https://ezgif.com/&lt;/a&gt;&lt;/td&gt;&lt;td&gt;支持 GIF 和图片互转&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;图片尺寸建议&lt;a href=&quot;#图片尺寸建议&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;端&lt;/th&gt;&lt;th&gt;推荐尺寸&lt;/th&gt;&lt;th&gt;宽高比&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;移动端&lt;/td&gt;&lt;td&gt;1080 × 1578&lt;/td&gt;&lt;td&gt;约 2:3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;桌面端&lt;/td&gt;&lt;td&gt;2560 × 1440&lt;/td&gt;&lt;td&gt;16:9&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;轮播配置&lt;a href=&quot;#轮播配置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;backgroundWallpaper.ts&lt;/code&gt; 中的 &lt;code&gt;banner.carousel&lt;/code&gt; 部分：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;carousel&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;enable&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;,           &lt;/span&gt;&lt;span&gt;// 是否启用轮播&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;interval&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;5000&lt;/span&gt;&lt;span&gt;,         &lt;/span&gt;&lt;span&gt;// 轮播间隔（毫秒）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;switchable&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;,       &lt;/span&gt;&lt;span&gt;// 是否允许用户手动切换&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;替换图片步骤&lt;a href=&quot;#替换图片步骤&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;准备好新的 AVIF 格式图片&lt;/li&gt;
+&lt;li&gt;根据目标设备，将图片放入对应文件夹：
+&lt;ul&gt;
+&lt;li&gt;移动端：&lt;code&gt;src/assets/images/MobileWallpaper/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;桌面端：&lt;code&gt;src/assets/images/DesktopWallpaper/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;刷新页面即可看到效果&lt;/li&gt;
+&lt;li&gt;如缓存未更新，按 &lt;code&gt;Ctrl + Shift + R&lt;/code&gt; 强制刷新&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;注意事项&lt;a href=&quot;#注意事项&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;文件名需与配置文件中的路径一致&lt;/li&gt;
+&lt;li&gt;图片会经过 Astro 自动优化，生成 WebP/AVIF 多种格式&lt;/li&gt;
+&lt;li&gt;替换后如未显示新图片，请清除浏览器缓存或重启开发服务器&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>首页文字打字机效果配置</title><link>https://blogboy.eu.cc/posts/typewriter-effect-config/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/typewriter-effect-config/</guid><description>博客首页横幅文字打字机效果配置教程。</description><pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;首页文字打字机效果配置&lt;a href=&quot;#首页文字打字机效果配置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h2&gt;配置文件位置&lt;a href=&quot;#配置文件位置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;src/config/backgroundWallpaper.ts&lt;/code&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;配置位置&lt;a href=&quot;#配置位置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;banner.homeText.typewriter&lt;/code&gt; 部分：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;homeText&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;enable&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;switchable&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;title&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;&quot;Coldairboy&apos;学习笔记&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;titleSize&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;&quot;4rem&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;subtitle&lt;/span&gt;&lt;span&gt;: [&lt;/span&gt;&lt;span&gt;&quot;欢迎来到我的博客，大家一起学习、成长吧！&quot;&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;subtitleSize&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;&quot;1.35rem&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;typewriter&lt;/span&gt;&lt;span&gt;: {&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;enable&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;,      &lt;/span&gt;&lt;span&gt;// true = 启用，false = 禁用&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;speed&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;100&lt;/span&gt;&lt;span&gt;,       &lt;/span&gt;&lt;span&gt;// 打字速度（毫秒/字符）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;deleteSpeed&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;50&lt;/span&gt;&lt;span&gt;,  &lt;/span&gt;&lt;span&gt;// 删除速度（毫秒/字符）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;        &lt;/span&gt;&lt;/span&gt;&lt;span&gt;pauseTime&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span&gt;2000&lt;/span&gt;&lt;span&gt;,  &lt;/span&gt;&lt;span&gt;// 显示完整后的停顿时间（毫秒）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;},&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;参数说明&lt;a href=&quot;#参数说明&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;th&gt;建议值&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;enable&lt;/code&gt;&lt;/td&gt;&lt;td&gt;是否启用打字机效果&lt;/td&gt;&lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;speed&lt;/code&gt;&lt;/td&gt;&lt;td&gt;打字速度（毫秒/字符）&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;50-150&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;deleteSpeed&lt;/code&gt;&lt;/td&gt;&lt;td&gt;删除速度（毫秒/字符）&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;&lt;td&gt;30-100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;pauseTime&lt;/code&gt;&lt;/td&gt;&lt;td&gt;显示完整后的停顿时间（毫秒）&lt;/td&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;1000-3000&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;效果说明&lt;a href=&quot;#效果说明&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;启用后，首页横幅副标题会以打字机效果显示：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;文字逐字显示（速度由 &lt;code&gt;speed&lt;/code&gt; 控制）&lt;/li&gt;
+&lt;li&gt;显示完整后停顿（由 &lt;code&gt;pauseTime&lt;/code&gt; 控制）&lt;/li&gt;
+&lt;li&gt;逐字删除（由 &lt;code&gt;deleteSpeed&lt;/code&gt; 控制）&lt;/li&gt;
+&lt;li&gt;循环重复&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;修改副标题文字&lt;a href=&quot;#修改副标题文字&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;subtitle&lt;/code&gt; 数组中修改：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;subtitle&lt;/span&gt;&lt;span&gt;: [&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&quot;你的副标题文字&quot;&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;支持多行文字，会按顺序逐行显示。&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item></channel></rss>
