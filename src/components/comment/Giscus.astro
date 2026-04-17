@@ -8,56 +8,100 @@ if (!commentConfig?.giscus) {
 const giscus = commentConfig.giscus;
 const lightTheme = "light";
 const darkTheme = "dark";
+const missingValue = (value: string) =>
+	!value || value.includes("REPLACE_WITH_GISCUS_");
+const needsSetup =
+	missingValue(giscus.repoId) || missingValue(giscus.categoryId);
 ---
 
-<script is:inline type="module" src="https://esm.sh/giscus"></script>
+{
+	needsSetup ? (
+		<div class="rounded-2xl border border-(--line-divider) bg-(--card-bg) p-6 text-sm leading-7 text-(--content)">
+			<div class="mb-3 text-lg font-semibold text-(--btn-content)">Giscus 评论区待完成</div>
+			<p class="mb-3">
+				评论区已经切换到 GitHub Discussions 驱动的 Giscus，还差最后两项参数：
+				<code>repoId</code> 和 <code>categoryId</code>。
+			</p>
+			<p class="mb-2">按这个顺序做就行：</p>
+			<ol class="list-decimal space-y-1 pl-5">
+				<li>打开 GitHub 仓库设置，启用 Discussions。</li>
+				<li>
+					打开
+					<a
+						href="https://giscus.app/zh-CN"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-(--primary) underline"
+					>
+						giscus.app/zh-CN
+					</a>
+					。
+				</li>
+				<li>
+					仓库填 <code>{giscus.repo}</code>，分类选 <code>{giscus.category}</code>，映射方式选
+					<code>{giscus.mapping}</code>。
+				</li>
+				<li>
+					把生成结果里的 <code>repoId</code> 和 <code>categoryId</code> 复制回
+					<code>src/config/commentConfig.ts</code>。
+				</li>
+				<li>
+					重新执行 <code>git add .</code>、<code>git commit -m "feat: enable giscus comments"</code>、
+					<code>git push origin main</code>。
+				</li>
+			</ol>
+		</div>
+	) : (
+		<>
+			<script is:inline type="module" src="https://esm.sh/giscus"></script>
 
-<!-- 
-  Giscus 官方Web Component用法，兼容Astro静态输出，无需import包，无需NPM依赖！
-  参考：https://giscus.app/ 详情配置说明
--->
-<giscus-widget
-  id="comments"
-  repo={giscus.repo}
-  repoId={giscus.repoId}
-  category={giscus.category}
-  categoryId={giscus.categoryId}
-  mapping={giscus.mapping}
-  strict={giscus.strict}
-  reactionsEnabled={giscus.reactionsEnabled}
-  emitMetadata={giscus.emitMetadata}
-  inputPosition={giscus.inputPosition}
-  theme={lightTheme}
-  lang={giscus.lang}
-  loading={giscus.loading}
-/>
+			<giscus-widget
+				id="comments"
+				repo={giscus.repo}
+				repoId={giscus.repoId}
+				category={giscus.category}
+				categoryId={giscus.categoryId}
+				mapping={giscus.mapping}
+				strict={giscus.strict}
+				reactionsEnabled={giscus.reactionsEnabled}
+				emitMetadata={giscus.emitMetadata}
+				inputPosition={giscus.inputPosition}
+				theme={lightTheme}
+				lang={giscus.lang}
+				loading={giscus.loading}
+			/>
 
-<script is:inline define:vars={{ lightTheme, darkTheme }}>
-  function updateGiscusTheme() {
-    const isDark = document.documentElement.classList.contains('dark');
-    const theme = isDark ? darkTheme : lightTheme;
-    const widget = document.querySelector('giscus-widget');
-    if (widget) {
-      widget.setAttribute('theme', theme);
-    }
-  }
+			<script is:inline define:vars={{ lightTheme, darkTheme }}>
+				function updateGiscusTheme() {
+					const isDark = document.documentElement.classList.contains("dark");
+					const theme = isDark ? darkTheme : lightTheme;
+					const widget = document.querySelector("giscus-widget");
+					if (widget) {
+						widget.setAttribute("theme", theme);
+					}
+				}
 
-  // Initial update
-  updateGiscusTheme();
+				updateGiscusTheme();
 
-  // Clean up previous observer if exists
-  if (window.giscusThemeObserver) {
-    window.giscusThemeObserver.disconnect();
-  }
+				if (window.giscusThemeObserver) {
+					window.giscusThemeObserver.disconnect();
+				}
 
-  // Create new observer
-  window.giscusThemeObserver = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        updateGiscusTheme();
-      }
-    });
-  });
+				window.giscusThemeObserver = new MutationObserver((mutations) => {
+					mutations.forEach((mutation) => {
+						if (
+							mutation.type === "attributes" &&
+							mutation.attributeName === "class"
+						) {
+							updateGiscusTheme();
+						}
+					});
+				});
 
-  window.giscusThemeObserver.observe(document.documentElement, { attributes: true });
-</script>
+				window.giscusThemeObserver.observe(document.documentElement, {
+					attributes: true,
+				});
+			</script>
+		</>
+	)
+}
