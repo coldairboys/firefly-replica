@@ -1,13 +1,102 @@
 ---
-title: 第一篇博客
+title: 博客首页顶部轮播图片配置
 published: 2026-04-17
-description: 这是 Coldairboy'学习笔记 的第一篇博客，用来记录新的开始。
-tags: [博客, 学习笔记]
-category: 默认分类
+description: 博客首页顶部轮播图片配置教程。
+tags: [博客配置]
+category: 博客搭建
 author: Coldairboy
 image: ./images/firefly1.avif
 ---
 
-欢迎来到 **Coldairboy'学习笔记**。
+# 博客首页顶部轮播图片配置
 
-这是新博客中的第一篇文章，后续会在这里持续记录学习过程、使用心得和一些日常折腾内容。
+## 图片位置
+
+首页顶部轮播图片分为移动端和桌面端两个版本：
+
+| 端 | 路径 | 说明 |
+|---|---|---|
+| 移动端 | `src/assets/images/MobileWallpaper/` | 手机/平板等移动设备显示 |
+| 桌面端 | `src/assets/images/DesktopWallpaper/` | 电脑等桌面设备显示 |
+
+## 配置文件位置
+
+`src/config/backgroundWallpaper.ts`
+
+## 配置说明
+
+```typescript
+src: {
+    desktop: [
+        "assets/images/DesktopWallpaper/d1.avif",
+        "assets/images/DesktopWallpaper/d2.avif",
+        "assets/images/DesktopWallpaper/d3.avif",
+        "assets/images/DesktopWallpaper/d4.avif",
+    ],
+    mobile: [
+        "assets/images/MobileWallpaper/m1.avif",
+        "assets/images/MobileWallpaper/m2.avif",
+        "assets/images/MobileWallpaper/m3.avif",
+        "assets/images/MobileWallpaper/m4.avif",
+    ],
+},
+```
+
+## 图片格式要求
+
+### 推荐格式：AVIF
+- **优势**：更高的压缩率，更小的文件体积，支持透明度和 HDR
+- **兼容性**：现代浏览器普遍支持
+
+### 推荐工具：Squoosh
+
+在线图片转换工具：**https://squoosh.app/**
+
+使用步骤：
+1. 打开 Squoosh 网站
+2. 将你的图片拖入页面
+3. 在左侧面板选择输出格式为 **AVIF**
+4. 调整质量滑块（建议 75-85%）
+5. 点击下载按钮
+
+### 其他可选工具
+
+| 工具 | 网址 | 特点 |
+|---|---|---|
+| CloudConvert | https://cloudconvert.com/ | 支持批量转换，格式全面 |
+| Convertio | https://convertio.co/ | 界面简洁，操作方便 |
+| ezGIF | https://ezgif.com/ | 支持 GIF 和图片互转 |
+
+## 图片尺寸建议
+
+| 端 | 推荐尺寸 | 宽高比 |
+|---|---|---|
+| 移动端 | 1080 × 1578 | 约 2:3 |
+| 桌面端 | 2560 × 1440 | 16:9 |
+
+## 轮播配置
+
+在 `backgroundWallpaper.ts` 中的 `banner.carousel` 部分：
+
+```typescript
+carousel: {
+    enable: true,           // 是否启用轮播
+    interval: 5000,         // 轮播间隔（毫秒）
+    switchable: true,       // 是否允许用户手动切换
+},
+```
+
+## 替换图片步骤
+
+1. 准备好新的 AVIF 格式图片
+2. 根据目标设备，将图片放入对应文件夹：
+   - 移动端：`src/assets/images/MobileWallpaper/`
+   - 桌面端：`src/assets/images/DesktopWallpaper/`
+3. 刷新页面即可看到效果
+4. 如缓存未更新，按 `Ctrl + Shift + R` 强制刷新
+
+## 注意事项
+
+- 文件名需与配置文件中的路径一致
+- 图片会经过 Astro 自动优化，生成 WebP/AVIF 多种格式
+- 替换后如未显示新图片，请清除浏览器缓存或重启开发服务器

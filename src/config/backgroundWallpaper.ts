@@ -24,10 +24,10 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			switchable: true,
 			title: "Coldairboy'学习笔记",
 			titleSize: "4rem",
-			subtitle: ["第一篇博客"],
+			subtitle: ["欢迎来到我的博客，大家一起学习、成长吧！"],
 			subtitleSize: "1.35rem",
 			typewriter: {
-				enable: false,
+				enable: true,
 				speed: 100,
 				deleteSpeed: 50,
 				pauseTime: 2000,

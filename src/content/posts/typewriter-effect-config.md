@@ -1,0 +1,63 @@
+---
+title: 首页文字打字机效果配置
+published: 2026-04-17
+description: 博客首页横幅文字打字机效果配置教程。
+tags: [博客配置]
+category: 博客搭建
+author: Coldairboy
+image: ./images/firefly1.avif
+---
+
+# 首页文字打字机效果配置
+
+## 配置文件位置
+
+`src/config/backgroundWallpaper.ts`
+
+## 配置位置
+
+在 `banner.homeText.typewriter` 部分：
+
+```typescript
+homeText: {
+    enable: true,
+    switchable: true,
+    title: "Coldairboy'学习笔记",
+    titleSize: "4rem",
+    subtitle: ["欢迎来到我的博客，大家一起学习、成长吧！"],
+    subtitleSize: "1.35rem",
+    typewriter: {
+        enable: true,      // true = 启用，false = 禁用
+        speed: 100,       // 打字速度（毫秒/字符）
+        deleteSpeed: 50,  // 删除速度（毫秒/字符）
+        pauseTime: 2000,  // 显示完整后的停顿时间（毫秒）
+    },
+},
+```
+
+## 参数说明
+
+| 参数 | 说明 | 默认值 | 建议值 |
+|---|---|---|---|
+| `enable` | 是否启用打字机效果 | `false` | `true` |
+| `speed` | 打字速度（毫秒/字符） | 100 | 50-150 |
+| `deleteSpeed` | 删除速度（毫秒/字符） | 50 | 30-100 |
+| `pauseTime` | 显示完整后的停顿时间（毫秒） | 2000 | 1000-3000 |
+
+## 效果说明
+
+启用后，首页横幅副标题会以打字机效果显示：
+1. 文字逐字显示（速度由 `speed` 控制）
+2. 显示完整后停顿（由 `pauseTime` 控制）
+3. 逐字删除（由 `deleteSpeed` 控制）
+4. 循环重复
+
+## 修改副标题文字
+
+在 `subtitle` 数组中修改：
+
+```typescript
+subtitle: ["你的副标题文字"],
+```
+
+支持多行文字，会按顺序逐行显示。
