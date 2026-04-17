@@ -38,7 +38,7 @@ import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
 export default defineConfig({
 	site: siteConfig.site_url,
 	
-	base: "/firefly-replica/",
+	base: "/",
 	trailingSlash: "always",
 
 	// 图像优化配置

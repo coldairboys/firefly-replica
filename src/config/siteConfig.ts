@@ -6,7 +6,7 @@ const SITE_LANG = "zh_CN";
 export const siteConfig: SiteConfig = {
 	title: "Coldairboy'学习笔记",
 	subtitle: "第一篇博客",
-	site_url: "https://coldairboys.github.io/firefly-replica",
+	site_url: "https://blogboy.eu.cc",
 	description:
 		"Coldairboy 的个人博客样板，使用 Astro + Firefly 构建，用来记录学习笔记与折腾记录。",
 	keywords: ["Coldairboy", "学习笔记", "Astro", "Firefly", "博客"],
