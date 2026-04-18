@@ -29,7 +29,7 @@ export const sponsorConfig: SponsorConfig = {
 			qrCode: "/assets/images/sponsor/alipay.png",
 			link: "",
 			description: "使用 支付宝 扫码赞助",
-			enabled: true,
+			enabled: false,
 		},
 		{
 			name: "微信",
