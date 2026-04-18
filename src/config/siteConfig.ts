@@ -37,7 +37,7 @@ export const siteConfig: SiteConfig = {
 		followTheme: false,
 		stickyNavbar: true,
 	},
-	siteStartDate: "2026-04-08",
+	siteStartDate: "2026-03-29",
 	timezone: "Asia/Shanghai",
 	rehypeCallouts: {
 		theme: "github",
