@@ -198,9 +198,9 @@ async function generatePoster() {
 		ctx.fill();
 
 		// Bottom Left Circle
-		// Adjusted to cover the avatar
+		// Positioned to not overlap with author section
 		ctx.beginPath();
-		ctx.arc(10 * scale, canvas.height - 10 * scale, 50 * scale, 0, Math.PI * 2);
+		ctx.arc(10 * scale, canvas.height - 40 * scale, 40 * scale, 0, Math.PI * 2);
 		ctx.fill();
 		ctx.restore();
 
@@ -347,36 +347,38 @@ async function generatePoster() {
 		ctx.stroke();
 		drawY += 24 * scale; // Spacing after line
 
-		// Draw Footer Content
+		// Draw Footer Content - Redesigned layout
 		const footerY = drawY;
+		const footerContentHeight = 80 * scale;
 
-		// Left: Author
+		// Left: Author Section
+		const authorAvatarSize = 48 * scale;
+		const authorAvatarX = padding;
+		const authorAvatarY = footerY + (footerContentHeight - authorAvatarSize) / 2;
+
 		if (avatarImg) {
 			ctx.save();
-			const avatarSize = 64 * scale;
-			const avatarX = padding;
-
 			// Circle clip
 			ctx.beginPath();
 			ctx.arc(
-				avatarX + avatarSize / 2,
-				footerY + avatarSize / 2,
-				avatarSize / 2,
+				authorAvatarX + authorAvatarSize / 2,
+				authorAvatarY + authorAvatarSize / 2,
+				authorAvatarSize / 2,
 				0,
 				Math.PI * 2,
 			);
 			ctx.closePath();
 			ctx.clip();
 
-			ctx.drawImage(avatarImg, avatarX, footerY, avatarSize, avatarSize);
+			ctx.drawImage(avatarImg, authorAvatarX, authorAvatarY, authorAvatarSize, authorAvatarSize);
 			ctx.restore();
 
 			// Border for avatar
 			ctx.beginPath();
 			ctx.arc(
-				avatarX + (64 * scale) / 2,
-				footerY + (64 * scale) / 2,
-				(64 * scale) / 2,
+				authorAvatarX + authorAvatarSize / 2,
+				authorAvatarY + authorAvatarSize / 2,
+				authorAvatarSize / 2,
 				0,
 				Math.PI * 2,
 			);
@@ -385,55 +387,41 @@ async function generatePoster() {
 			ctx.stroke();
 		}
 
-		const authorTextX = padding + (avatar ? 64 * scale + 16 * scale : 0);
-		const textCenterY = footerY + 32 * scale;
+		// Author name next to avatar
+		const authorTextX = authorAvatarX + authorAvatarSize + 12 * scale;
+		const authorTextY = authorAvatarY + authorAvatarSize / 2;
 
-		ctx.fillStyle = "#9ca3af";
-		ctx.font = `${12 * scale}px 'Roboto', sans-serif`;
-		ctx.fillText(i18n(I18nKey.author), authorTextX, textCenterY - 20 * scale);
+		ctx.textAlign = "left";
+		ctx.textBaseline = "middle";
+		ctx.fillStyle = "#6b7280";
+		ctx.font = `${11 * scale}px 'Roboto', sans-serif`;
+		ctx.fillText(i18n(I18nKey.author), authorTextX, authorTextY - 12 * scale);
 
 		ctx.fillStyle = "#1f2937";
-		ctx.font = `700 ${20 * scale}px 'Roboto', sans-serif`;
-		ctx.fillText(author, authorTextX, textCenterY + 4 * scale);
+		ctx.font = `600 ${16 * scale}px 'Roboto', sans-serif`;
+		ctx.fillText(author, authorTextX, authorTextY + 8 * scale);
 
-		// Right: QR Code
-		const qrSize = 64 * scale;
+		// Right: QR Code Section
+		const qrSize = 56 * scale;
 		const qrX = width - padding - qrSize;
+		const qrY = footerY + (footerContentHeight - qrSize) / 2;
 
-		// QR Background/Shadow effect (simplified as border)
+		// QR Background
 		ctx.fillStyle = "#ffffff";
-		// Shadow simulation
-		ctx.shadowColor = "rgba(0, 0, 0, 0.05)";
-		ctx.shadowBlur = 4 * scale;
-		ctx.shadowOffsetY = 2 * scale;
-		drawRoundedRect(ctx, qrX, footerY, qrSize, qrSize, 4 * scale);
+		drawRoundedRect(ctx, qrX - 4 * scale, qrY - 4 * scale, qrSize + 8 * scale, qrSize + 8 * scale, 6 * scale);
 		ctx.fill();
-		ctx.shadowColor = "transparent"; // Reset shadow
 
 		// Draw QR
-		const qrInnerSize = 56 * scale;
-		const qrPadding = (qrSize - qrInnerSize) / 2;
 		if (qrImg) {
-			ctx.drawImage(
-				qrImg,
-				qrX + qrPadding,
-				footerY + qrPadding,
-				qrInnerSize,
-				qrInnerSize,
-			);
+			ctx.drawImage(qrImg, qrX, qrY, qrSize, qrSize);
 		}
 
-		// Site Info (Left of QR)
-		const siteInfoX = qrX - 16 * scale;
-		ctx.textAlign = "right";
-
+		// Scan text below QR
+		const scanTextY = qrY + qrSize + 14 * scale;
+		ctx.textAlign = "center";
 		ctx.fillStyle = "#9ca3af";
-		ctx.font = `${12 * scale}px 'Roboto', sans-serif`;
-		ctx.fillText(i18n(I18nKey.scanToRead), siteInfoX, textCenterY - 20 * scale);
-
-		ctx.fillStyle = "#1f2937";
-		ctx.font = `700 ${20 * scale}px 'Roboto', sans-serif`;
-		ctx.fillText(siteTitle, siteInfoX, textCenterY + 4 * scale);
+		ctx.font = `${10 * scale}px 'Roboto', sans-serif`;
+		ctx.fillText(i18n(I18nKey.scanToRead), qrX + qrSize / 2, scanTextY);
 
 		// Finalize
 		posterImage = canvas.toDataURL("image/png");
