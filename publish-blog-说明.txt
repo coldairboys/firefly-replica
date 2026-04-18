@@ -1,44 +1,33 @@
-【publish-blog.bat 使用说明】
+publish-blog.bat 使用说明
 
-1. 直接双击 publish-blog.bat
-2. 脚本会先显示当前 Git 状态
-3. 然后让你输入一次提交说明
-4. 回车后会自动执行：
-   - git add .
-   - git commit -m "你的说明"
-   - git push origin main
-5. 执行结束后窗口不会闪退
-6. 不管成功还是失败，都会生成一个结果文件：
-   publish-result.txt
+1. 双击 publish-blog.bat
+2. 它会自动执行下面三步：
+git add .
+git commit -m "你的说明"（只有真的有新改动时才会提交）
+git push origin main（只要本地有提交没推上去，它就会继续推）
+3. 运行结束后不会直接闪退
+4. 结果会写入 publish-result.txt
 
-【如果你不想输入提交说明】
+什么时候用它
+你刚改完博客内容，想一键提交并推送，就双击 publish-blog.bat
 
-直接回车就行。
-脚本会自动使用默认说明：
-update blog content
+什么时候用 push-only.bat
+你已经执行过 git commit，只是因为网络问题没推上去
+这时双击 push-only.bat 就行，它只负责重新推送
 
-【怎么判断有没有推送成功】
-
+怎么判断有没有成功
 打开 publish-result.txt
+如果看到 Result: push success，就说明已经成功推送到 GitHub
 
-如果里面出现：
-Result: push success
+常见失败原因
+1. 网络暂时连不上 GitHub
+2. 代理或 VPN 设置有问题
+3. GitHub 登录状态异常
 
-就说明已经推送成功。
-
-【如果失败了】
-
-先看黑窗口里的英文报错。
-常见原因：
-
-1. 网络连不上 GitHub
-2. 你没有新的改动
-3. Git 登录或远程仓库有问题
-
-【建议】
-
-第一次运行时，建议不要双击。
-先在终端里执行一次，方便观察：
-
+终端手动运行方式
 cd E:\GITHUB\firefly-replica
 .\publish-blog.bat
+
+如果你只是重推已经提交过的内容
+cd E:\GITHUB\firefly-replica
+.\push-only.bat

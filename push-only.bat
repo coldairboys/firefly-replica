@@ -1,22 +1,10 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
-title Blog Publish Helper
-
-rem ==========================================================
-rem Blog publish helper
-rem - Show git status
-rem - Stage all changes
-rem - Commit only when there are staged changes
-rem - Push even if there are already local commits ahead of origin
-rem - Write final result to publish-result.txt
-rem ==========================================================
+title Blog Push Only
 
 set "ROOT_DIR=%~dp0"
 set "RESULT_FILE=%ROOT_DIR%publish-result.txt"
-set "DEFAULT_MSG=update blog content"
-set "COMMIT_MSG="
 set "AHEAD_COUNT=0"
-set "LAST_COMMIT="
 set "NOW_TEXT="
 
 cd /d "%ROOT_DIR%"
@@ -24,7 +12,7 @@ call :set_time
 
 echo.
 echo ==========================================
-echo           Blog Publish Helper
+echo             Blog Push Only
 echo ==========================================
 echo.
 echo Project folder:
@@ -43,56 +31,14 @@ if errorlevel 1 (
     goto :write_fail
 )
 
-echo [1/5] Check git status
+echo [1/3] Check git status
 git status -sb
 if errorlevel 1 (
     echo [ERROR] Failed to read git status.
     goto :write_fail
 )
 
-echo.
-echo [2/5] Stage all changes
-git add .
-if errorlevel 1 (
-    echo [ERROR] git add failed.
-    goto :write_fail
-)
-
-git reset -q -- publish-result.txt >nul 2>nul
-
-echo [3/5] Check whether a new commit is needed
-git diff --cached --quiet
-set "DIFF_EXIT=%errorlevel%"
-
-if "%DIFF_EXIT%"=="1" goto :do_commit
-if "%DIFF_EXIT%"=="0" goto :skip_commit
-
-echo [ERROR] Unable to inspect staged changes.
-goto :write_fail
-
-:do_commit
-echo.
-set /p "COMMIT_MSG=Enter commit message (default: update blog content): "
-if "%COMMIT_MSG%"=="" set "COMMIT_MSG=%DEFAULT_MSG%"
-
-echo.
-echo [4/5] Create commit
-git commit -m "%COMMIT_MSG%"
-if errorlevel 1 (
-    echo [ERROR] git commit failed.
-    goto :write_fail
-)
-goto :after_commit
-
-:skip_commit
-echo [INFO] No new staged changes. Skip commit.
-
-:after_commit
-
 for /f %%i in ('git rev-list --count origin/main..HEAD 2^>nul') do set "AHEAD_COUNT=%%i"
-if not defined AHEAD_COUNT (
-    for /f %%i in ('git rev-list --count HEAD 2^>nul') do set "AHEAD_COUNT=%%i"
-)
 if not defined AHEAD_COUNT set "AHEAD_COUNT=0"
 
 if "%AHEAD_COUNT%"=="0" (
@@ -107,7 +53,7 @@ if "%AHEAD_COUNT%"=="0" (
 )
 
 echo.
-echo [5/5] Push to GitHub
+echo [2/3] Push to GitHub
 echo Local commits waiting to push: %AHEAD_COUNT%
 git push origin main
 if errorlevel 1 (
@@ -117,18 +63,15 @@ if errorlevel 1 (
     goto :write_fail
 )
 
-for /f "delims=" %%i in ('git log -1 --pretty^=oneline') do set "LAST_COMMIT=%%i"
-
 > "%RESULT_FILE%" (
     echo Time: %NOW_TEXT%
     echo Result: push success
     echo Local commits pushed: %AHEAD_COUNT%
-    echo Last commit: !LAST_COMMIT!
     echo Info: GitHub Pages will deploy automatically
 )
 
 echo.
-echo [OK] Push completed.
+echo [3/3] Push completed.
 echo Result file:
 echo %RESULT_FILE%
 goto :finish
@@ -140,7 +83,7 @@ goto :finish
     echo Info: check the command window for details
 )
 echo.
-echo [FAIL] Publish failed.
+echo [FAIL] Push failed.
 echo Result file:
 echo %RESULT_FILE%
 goto :finish
