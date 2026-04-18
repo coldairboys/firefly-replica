@@ -4,8 +4,8 @@ import { fontConfig } from "./fontConfig";
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
-	title: "Coldairboy'学习笔记",
-	subtitle: "第一篇博客",
+	title: "Coldairboy学习笔记",
+	subtitle: "用来记录学习笔记与折腾记录。",
 	site_url: "https://blogboy.eu.cc",
 	description:
 		"Coldairboy 的个人博客样板，使用 Astro + Firefly 构建，用来记录学习笔记与折腾记录。",
@@ -31,13 +31,13 @@ export const siteConfig: SiteConfig = {
 			value: "material-symbols:auto-awesome-outline",
 			alt: "Logo",
 		},
-		title: "Coldairboy'学习笔记",
+		title: "Coldairboy学习笔记",
 		widthFull: false,
 		menuAlign: "center",
 		followTheme: false,
 		stickyNavbar: true,
 	},
-	siteStartDate: "2024-01-01",
+	siteStartDate: "2026-04-08",
 	timezone: "Asia/Shanghai",
 	rehypeCallouts: {
 		theme: "github",

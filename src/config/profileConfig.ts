@@ -1,7 +1,7 @@
 import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://github.com/coldairboys.png",
+	avatar: "https://avatars.githubusercontent.com/coldairboys",
 	name: "Coldairboy",
 	bio: "记录学习笔记、折腾过程和日常灵感。",
 	links: [
@@ -15,12 +15,6 @@ export const profileConfig: ProfileConfig = {
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/coldairboys",
-			showName: false,
-		},
-		{
-			name: "RSS",
-			icon: "fa7-solid:rss",
-			url: "/rss/",
 			showName: false,
 		},
 	],

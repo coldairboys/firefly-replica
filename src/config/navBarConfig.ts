@@ -17,6 +17,11 @@ const links: NavBarLink[] = [
 		icon: "material-symbols:person-outline-rounded",
 	},
 	{
+		name: "赞助",
+		url: "/sponsor/",
+		icon: "material-symbols:favorite-outline-rounded",
+	},
+	{
 		name: "Bilibili",
 		url: "https://space.bilibili.com/9182171/upload/video",
 		external: true,
