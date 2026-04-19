@@ -22,7 +22,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		homeText: {
 			enable: true,
 			switchable: true,
-			title: "Coldairboy'学习笔记",
+			title: "Coldairboy学习笔记",
 			titleSize: "4rem",
 			subtitle: ["欢迎来到我的博客，大家一起学习、成长吧！"],
 			subtitleSize: "1.35rem",
