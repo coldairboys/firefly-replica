@@ -1,6 +1,7 @@
 import { getSortedPosts } from "@/utils/content-utils";
+import type { APIRoute } from "astro";
 
-export async function GET() {
+export async function GET(): Promise<Response> {
 	const posts = await getSortedPosts();
 
 	const allPostsData = posts

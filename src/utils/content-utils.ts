@@ -4,7 +4,7 @@ import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils";
 
 // // Retrieve posts and sort them by publication date
-async function getRawSortedPosts() {
+async function getRawSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
@@ -22,7 +22,7 @@ async function getRawSortedPosts() {
 	return sorted;
 }
 
-export async function getSortedPosts() {
+export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 	const sorted = await getRawSortedPosts();
 
 	for (let i = 1; i < sorted.length; i++) {
@@ -169,13 +169,13 @@ export async function getRelatedPosts(
 		(p) => p.id !== currentPost.id && !p.data.password,
 	);
 
-	const currentTags = new Set(currentPost.data.tags || []);
+	const currentTags = new Set<string>(currentPost.data.tags || []);
 	const currentTokens = tokenizeTitle(currentPost.data.title);
 	const currentCategory = currentPost.data.category || "";
 	const now = Date.now();
 
 	const scored = candidates.map((post) => {
-		const postTags = new Set(post.data.tags || []);
+		const postTags = new Set<string>(post.data.tags || []);
 
 		// tagMatchScore (0-100)
 		const tagMatchScore = jaccardSimilarity(currentTags, postTags) * 100;

@@ -354,7 +354,8 @@ async function generatePoster() {
 		// Left: Author Section
 		const authorAvatarSize = 48 * scale;
 		const authorAvatarX = padding;
-		const authorAvatarY = footerY + (footerContentHeight - authorAvatarSize) / 2;
+		const authorAvatarY =
+			footerY + (footerContentHeight - authorAvatarSize) / 2;
 
 		if (avatarImg) {
 			ctx.save();
@@ -370,7 +371,13 @@ async function generatePoster() {
 			ctx.closePath();
 			ctx.clip();
 
-			ctx.drawImage(avatarImg, authorAvatarX, authorAvatarY, authorAvatarSize, authorAvatarSize);
+			ctx.drawImage(
+				avatarImg,
+				authorAvatarX,
+				authorAvatarY,
+				authorAvatarSize,
+				authorAvatarSize,
+			);
 			ctx.restore();
 
 			// Border for avatar
@@ -408,7 +415,14 @@ async function generatePoster() {
 
 		// QR Background
 		ctx.fillStyle = "#ffffff";
-		drawRoundedRect(ctx, qrX - 4 * scale, qrY - 4 * scale, qrSize + 8 * scale, qrSize + 8 * scale, 6 * scale);
+		drawRoundedRect(
+			ctx,
+			qrX - 4 * scale,
+			qrY - 4 * scale,
+			qrSize + 8 * scale,
+			qrSize + 8 * scale,
+			6 * scale,
+		);
 		ctx.fill();
 
 		// Draw QR
