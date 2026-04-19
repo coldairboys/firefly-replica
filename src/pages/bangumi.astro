@@ -1,0 +1,70 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import type { SiteConfig } from '@/types/config';
+import { siteConfig } from '@/config/siteConfig';
+import I18nKey from '@/i18n/i18nKey';
+import { i18n } from '@/i18n/translation';
+import type { BangumiItem } from '@/types/bangumi';
+import BangumiSection from '@/components/pages/bangumi/BangumiSection.astro';
+
+export interface Props {
+  bangumiData?: BangumiItem[];
+}
+
+const { bangumiData } = Astro.props;
+
+const pageTitle = i18n(I18nKey.bangumi);
+const pageDescription = i18n(I18nKey.bangumiDescription);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  pageType="bangumi"
+  pageUrl={new URL('/bangumi/', siteConfig.site_url)}
+>
+  <main class="main-content">
+    <section class="container mx-auto px-4 py-10">
+      <!-- 页面标题 -->
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">
+          {pageTitle}
+        </h1>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400">
+          {pageDescription}
+        </p>
+      </div>
+
+      <!-- 番剧内容 -->
+      <BangumiSection sectionId="anime" items={[]} isActive={true} />
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // 页面加载时的动画效果
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('.main-content');
+    if (section) {
+      section.classList.add('fade-in');
+    }
+  });
+</script>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

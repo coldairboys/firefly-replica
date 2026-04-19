@@ -47,7 +47,7 @@ export const siteConfig: SiteConfig = {
 	sharePoster: true,
 	generateOgImages: false,
 	bangumi: {
-		userId: "1143164",
+		userId: "9182171",
 		categoryOrder: ["anime", "book", "music", "game"],
 	},
 	pages: {

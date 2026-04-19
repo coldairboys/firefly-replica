@@ -8,12 +8,12 @@ import FilterControls from "./FilterControls.astro";
 
 interface Props {
 	sectionId: string;
-	items: UserSubjectCollection[];
+	items?: UserSubjectCollection[];
 	isActive: boolean;
 	itemsPerPage?: number;
 }
 
-const { sectionId, items, isActive, itemsPerPage = 12 } = Astro.props;
+const { sectionId, items = [], isActive, itemsPerPage = 12 } = Astro.props;
 
 // 状态映射
 const statusMap = {
