@@ -6,10 +6,6 @@
 
 `https://github.com/coldairboys/firefly-replica`
 
-页面风格参考了目标站：
-
-`https://blog.910501.xyz/`
-
 技术底子来源于开源项目 Firefly：
 
 `https://github.com/CuteLeaf/Firefly`
