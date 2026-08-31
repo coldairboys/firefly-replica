@@ -58,9 +58,9 @@ jobs:
           $postNum = "${{ steps.postnum.outputs.number }}"
           $prompt = "根据项目博客，草拟本周GITHUB热门AI相关项目博文，并保存在 src/content/posts/${postNum}.md"
           Write-Host "Prompting DSH Agent: $prompt"
-          # Use DSH CLI in non-interactive mode to execute the task
+          # Use DSH CLI in headless (non-interactive) mode to execute the task
           # The agent will search trending repos, draft the post, and write the file
-          & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" run --prompt "$prompt" --yes
+          & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" --profile headless "$prompt"
 
       - name: Commit and push
         shell: pwsh
