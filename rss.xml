@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年8月31日 21:25:25</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年8月31日 21:30:19</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
 &lt;section&gt;&lt;h2&gt;1. 项目地址&lt;a href=&quot;#1-项目地址&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/cccoder159/astro-firefly&quot; target=&quot;_blank&quot;&gt;https://github.com/cccoder159/astro-firefly&lt;/a&gt; （如果觉得项目不错，给作者点个 ⭐ 吧！）&lt;/p&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h2&gt;2. 环境准备（小白必看）&lt;a href=&quot;#2-环境准备小白必看&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在开始之前，需要先安装两个工具：&lt;/p&gt;&lt;section&gt;&lt;h3&gt;2.1 安装 Git&lt;a href=&quot;#21-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows 用户：&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
 &lt;li&gt;访问 &lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot;&gt;https://git-scm.com/download/win&lt;/a&gt;&lt;/li&gt;
@@ -354,116 +354,7 @@
 
 
 
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Aider&lt;/td&gt;&lt;td&gt;终端中的 AI 结对编程助手，支持 git 感知的代码编辑&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/paul-gauthier/aider&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Docling&lt;/td&gt;&lt;td&gt;IBM 开源的文档转换库，PDF → 结构化 JSON/Markdown&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/DS4SD/docling&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ollama&lt;/td&gt;&lt;td&gt;一键本地运行 LLM 的桌面应用，macOS/Linux/Windows 全支持&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/ollama/ollama&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;如果说上周的主题是”Agent 基础设施补课”，那么本周的信号更加明确：&lt;strong&gt;AI 开源社区正在攻克”最后一公里”的工程难题&lt;/strong&gt;。&lt;/p&gt;&lt;p&gt;代码审查、文档理解、GUI 操作、无限记忆——这些都不是炫技型的 benchmark 项目，而是开发者在日常工作中真切感受到的痛点。当一个开源项目能让你的工作效率翻倍，它的 Star 增长就是自然而然的事。&lt;/p&gt;&lt;p&gt;另外值得注意的是，中国团队（清华、智谱、InfiniFlow）在本周榜单中占据了半壁江山。从跟随到引领，中国 AI 开源力量正在全球舞台上发出越来越强的声音。&lt;/p&gt;&lt;p&gt;挑一个项目，动手试试吧！也许下一个爆款，就从你的 fork 开始。&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第二周，我们将关注 AI 测试自动化工具和多 Agent 安全治理框架的最新进展。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>31.本周 GitHub 热门 AI 开源项目盘点（2026年9月第2周）</title><link>https://blogboy.eu.cc/posts/31/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/31/</guid><description>盘点 2026 年 9 月第二周 GitHub 上最热门的 AI 相关开源项目，涵盖 AI 测试自动化、多 Agent 安全治理、端侧模型部署、合成数据生成等方向。</description><pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第2周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第2周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;排名&lt;/th&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;Stars&lt;/th&gt;&lt;th&gt;语言&lt;/th&gt;&lt;th&gt;亮点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/qodo-ai/qodo-gen&quot; target=&quot;_blank&quot;&gt;Qodo&lt;/a&gt;&lt;/td&gt;&lt;td&gt;48K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;AI 驱动的单元测试自动生成与覆盖率优化&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/microsoft/agentguard&quot; target=&quot;_blank&quot;&gt;AgentGuard&lt;/a&gt;&lt;/td&gt;&lt;td&gt;32K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;微软开源多 Agent 安全治理框架&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/mlc-ai/mlc-llm&quot; target=&quot;_blank&quot;&gt;MLC-LLM&lt;/a&gt;&lt;/td&gt;&lt;td&gt;55K+&lt;/td&gt;&lt;td&gt;C++&lt;/td&gt;&lt;td&gt;端侧 LLM 推理引擎，手机/IoT 设备可用&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/sakanaai/synthdata&quot; target=&quot;_blank&quot;&gt;SynthData&lt;/a&gt;&lt;/td&gt;&lt;td&gt;28K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;Sakana AI 合成数据生成工具链&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/langchain-ai/langgraph&quot; target=&quot;_blank&quot;&gt;LangGraph&lt;/a&gt;&lt;/td&gt;&lt;td&gt;62K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;有状态多 Agent 编排框架&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/mistralai/voxtral&quot; target=&quot;_blank&quot;&gt;Voxtral&lt;/a&gt;&lt;/td&gt;&lt;td&gt;25K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;Mistral 开源实时语音理解模型&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🔥 重点项目详解&lt;a href=&quot;#-重点项目详解&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. Qodo — AI 驱动的测试自动化&lt;a href=&quot;#1-qodo--ai-驱动的测试自动化&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/qodo-ai/qodo-gen&quot; target=&quot;_blank&quot;&gt;qodo-ai/qodo-gen&lt;/a&gt; ⭐ 48,127&lt;/p&gt;&lt;p&gt;正如上期预告所关注，AI 测试自动化工具本周迎来爆发。Qodo（原 CodiumAI）不仅生成单元测试，还能分析代码路径、识别边界条件、自动修复失败的测试用例。它真正理解”这段代码应该被怎样测试”，而非简单补全断言。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;基于语义分析的测试生成，覆盖率提升 30%+&lt;/li&gt;
-&lt;li&gt;支持 pytest / Jest / JUnit / Go test 等主流框架&lt;/li&gt;
-&lt;li&gt;IDE 插件 + CI/CD 集成，PR 级别自动测试建议&lt;/li&gt;
-&lt;li&gt;可配置测试风格和团队规范&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;为什么火：&lt;/strong&gt; 写测试是开发者最不愿做但又最重要的事。当 AI 能把这件事做到 80 分，剩下的 20 分人类才愿意补。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. AgentGuard — 多 Agent 安全治理框架&lt;a href=&quot;#2-agentguard--多-agent-安全治理框架&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/microsoft/agentguard&quot; target=&quot;_blank&quot;&gt;microsoft/agentguard&lt;/a&gt; ⭐ 32,456&lt;/p&gt;&lt;p&gt;随着多 Agent 系统进入生产环境，安全问题从”理论讨论”变成”工程刚需”。AgentGuard 提供了 Agent 间通信的权限控制、行为审计、异常检测和熔断机制，相当于给 Agent 集群装上了”防火墙 + 监控中心”。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;声明式策略引擎：定义谁能调用谁、能访问什么资源&lt;/li&gt;
-&lt;li&gt;运行时行为追踪与合规日志&lt;/li&gt;
-&lt;li&gt;异常模式检测：防止 Prompt 注入在 Agent 链中传播&lt;/li&gt;
-&lt;li&gt;兼容 AutoGen / CrewAI / LangGraph 等主流框架&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;行业意义：&lt;/strong&gt; 这是 Agent 从”玩具”走向”企业级”的关键基础设施。没有安全治理，就没有生产部署。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. MLC-LLM — 让大模型跑在手机和 IoT 设备上&lt;a href=&quot;#3-mlc-llm--让大模型跑在手机和-iot-设备上&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/mlc-ai/mlc-llm&quot; target=&quot;_blank&quot;&gt;mlc-ai/mlc-llm&lt;/a&gt; ⭐ 55,892&lt;/p&gt;&lt;p&gt;MLC-LLM 将 LLM 编译为原生 GPU/NPU 指令，使 Phi-3-mini、Qwen2.5-3B 等小模型能在 iPhone / Android / Raspberry Pi 上流畅运行。本周因新增对高通 NPU 和 Apple Neural Engine 的原生支持再次登顶。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;TVM 编译器栈，自动适配不同硬件后端&lt;/li&gt;
-&lt;li&gt;支持 ONNX / GGUF / SafeTensors 模型格式&lt;/li&gt;
-&lt;li&gt;提供 iOS / Android / Web 端 SDK&lt;/li&gt;
-&lt;li&gt;量化感知训练，INT4 精度几乎无损&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;想象空间：&lt;/strong&gt; 离线语音助手、车载智能交互、工业边缘检测——端侧 AI 的商业化窗口正在打开。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. SynthData — 高质量合成数据生成工具链&lt;a href=&quot;#4-synthdata--高质量合成数据生成工具链&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/sakanaai/synthdata&quot; target=&quot;_blank&quot;&gt;sakanaai/synthdata&lt;/a&gt; ⭐ 28,341&lt;/p&gt;&lt;p&gt;Sakana AI 开源的合成数据工具链，解决了微调大模型时”真实数据贵且少”的痛点。通过教师模型生成多样化样本，再经质量过滤和去重，产出可用于 SFT / RLHF 的高质量数据集。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;支持指令跟随、对话、代码、数学等多种数据类型&lt;/li&gt;
-&lt;li&gt;内置多样性采样和质量评分算法&lt;/li&gt;
-&lt;li&gt;可对接 HuggingFace Datasets 一键导出&lt;/li&gt;
-&lt;li&gt;成本仅为真实数据采集的 1/50&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;解决痛点：&lt;/strong&gt; 让小团队也能拥有”数据飞轮”，不再被大厂的数据壁垒卡脖子。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. LangGraph — 有状态的多 Agent 编排&lt;a href=&quot;#5-langgraph--有状态的多-agent-编排&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/langchain-ai/langgraph&quot; target=&quot;_blank&quot;&gt;langchain-ai/langgraph&lt;/a&gt; ⭐ 62,108&lt;/p&gt;&lt;p&gt;LangChain 团队推出的图结构 Agent 编排框架，弥补了传统 Chain 无法处理循环、分支和持久状态的缺陷。每个节点是一个 Agent 或工具调用，边定义了执行逻辑，状态在图中流动并可检查点恢复。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;原生支持循环、条件分支、并行执行&lt;/li&gt;
-&lt;li&gt;内置检查点和时间旅行调试&lt;/li&gt;
-&lt;li&gt;可视化编辑器 + Studio 调试界面&lt;/li&gt;
-&lt;li&gt;与 LangSmith 无缝集成，全链路可观测&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;为什么重要：&lt;/strong&gt; 复杂任务不可能靠一条直线 Chain 完成。LangGraph 让 Agent 工作流真正具备了”编程能力”。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. Voxtral — 实时语音理解的开源标杆&lt;a href=&quot;#6-voxtral--实时语音理解的开源标杆&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/mistralai/voxtral&quot; target=&quot;_blank&quot;&gt;mistralai/voxtral&lt;/a&gt; ⭐ 25,678&lt;/p&gt;&lt;p&gt;Mistral AI 开源的语音理解模型，支持多语言语音转文本、语音指令解析和情感识别。延迟低于 200ms，可在本地部署，填补了开源社区在实时语音理解领域的空白。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;端到端语音理解，无需 ASR + LLM 拼接&lt;/li&gt;
-&lt;li&gt;支持中 / 英 / 法 / 德 / 日 / 西 六语种&lt;/li&gt;
-&lt;li&gt;流式输出，首字延迟 &amp;lt; 150ms&lt;/li&gt;
-&lt;li&gt;兼容 Whisper API 格式，迁移成本低&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;应用场景：&lt;/strong&gt; 智能客服、会议记录、语音笔记、无障碍交互。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;📈 本周趋势观察&lt;a href=&quot;#-本周趋势观察&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. AI 测试从”辅助”走向”主导”&lt;a href=&quot;#1-ai-测试从辅助走向主导&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Qodo 的增长表明：开发者开始信任 AI 生成的测试代码。当测试生成质量稳定超过人类平均水平，测试左移才真正落地。预计下个季度，CI 中 AI 测试生成将成为标配。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. Agent 安全成为新赛道&lt;a href=&quot;#2-agent-安全成为新赛道&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;AgentGuard 的出现标志着社区共识的形成：没有安全就没有生产。未来几个月，我们预计会看到更多针对 Prompt 注入防护、Agent 身份认证、输出合规审查的专用工具。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 端侧 AI 进入实用阶段&lt;a href=&quot;#3-端侧-ai-进入实用阶段&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;MLC-LLM + Qwen2.5-3B / Phi-3-mini 的组合，让”手机上跑大模型”从演示变成了可用的产品方案。硬件厂商的 NPU 适配竞赛将进一步加速这一进程。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. 合成数据民主化&lt;a href=&quot;#4-合成数据民主化&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SynthData 降低了高质量数据的获取门槛。对于垂直领域创业者和学术研究者，这意味着可以用十分之一的预算做出可比拟大厂效果的微调模型。数据霸权正在被技术瓦解。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🛠️ 值得一试的小工具&lt;a href=&quot;#️-值得一试的小工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Pytest-Cov-AI&lt;/td&gt;&lt;td&gt;结合覆盖率报告的 AI 测试补全插件&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/example/pytest-cov-ai&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Guardrails-AI&lt;/td&gt;&lt;td&gt;LLM 输出结构化验证与安全防护库&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/guardrails-ai/guardrails&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sherpa-ONNX&lt;/td&gt;&lt;td&gt;超轻量级端侧语音识别引擎，支持嵌入式设备&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/k2-fsa/sherpa-onnx&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;如果说上周的主题是”攻克最后一公里工程难题”，那么本周的信号更加深层：&lt;strong&gt;AI 开源社区正在构建”可信、可控、可部署”的生产级基础设施&lt;/strong&gt;。&lt;/p&gt;&lt;p&gt;测试自动化让代码更可靠，安全治理让 Agent 更可信，端侧推理让部署更自主，合成数据让创新更平等。这些项目或许不像聊天机器人那样吸引眼球，但它们才是 AI 从实验室走进千行百业的真正基石。&lt;/p&gt;&lt;p&gt;特别值得一提的是，本周榜单中”基础设施型”项目占比超过六成。社区的关注点正在从”模型本身”转向”模型之外的一切”。这恰恰说明：AI 开源生态正在走向成熟。&lt;/p&gt;&lt;p&gt;挑一个项目，为你的下一个生产系统添一块砖吧！&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第三周，我们将关注 AI 驱动的设计工具和开源向量数据库的最新演进。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>28.Hermes Agent 完整安装部署指南</title><link>https://blogboy.eu.cc/posts/28/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/28/</guid><description>一篇全面的 Hermes Agent 安装指南，涵盖 Linux、macOS、Windows（WSL2）等系统，包含环境依赖、快速安装、手动安装、Docker 安装等多种方式。</description><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;Hermes Agent 完整安装部署指南&lt;a href=&quot;#hermes-agent-完整安装部署指南&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Hermes Agent 是 Nous Research 推出的一款可成长的 AI Agent，主打自主学习、多层记忆架构和丰富的工具系统。这篇指南将带你从零开始完成安装部署。&lt;/p&gt;&lt;section&gt;&lt;h2&gt;项目简介&lt;a href=&quot;#项目简介&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Aider&lt;/td&gt;&lt;td&gt;终端中的 AI 结对编程助手，支持 git 感知的代码编辑&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/paul-gauthier/aider&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Docling&lt;/td&gt;&lt;td&gt;IBM 开源的文档转换库，PDF → 结构化 JSON/Markdown&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/DS4SD/docling&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ollama&lt;/td&gt;&lt;td&gt;一键本地运行 LLM 的桌面应用，macOS/Linux/Windows 全支持&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/ollama/ollama&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;如果说上周的主题是”Agent 基础设施补课”，那么本周的信号更加明确：&lt;strong&gt;AI 开源社区正在攻克”最后一公里”的工程难题&lt;/strong&gt;。&lt;/p&gt;&lt;p&gt;代码审查、文档理解、GUI 操作、无限记忆——这些都不是炫技型的 benchmark 项目，而是开发者在日常工作中真切感受到的痛点。当一个开源项目能让你的工作效率翻倍，它的 Star 增长就是自然而然的事。&lt;/p&gt;&lt;p&gt;另外值得注意的是，中国团队（清华、智谱、InfiniFlow）在本周榜单中占据了半壁江山。从跟随到引领，中国 AI 开源力量正在全球舞台上发出越来越强的声音。&lt;/p&gt;&lt;p&gt;挑一个项目，动手试试吧！也许下一个爆款，就从你的 fork 开始。&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第二周，我们将关注 AI 测试自动化工具和多 Agent 安全治理框架的最新进展。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>28.Hermes Agent 完整安装部署指南</title><link>https://blogboy.eu.cc/posts/28/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/28/</guid><description>一篇全面的 Hermes Agent 安装指南，涵盖 Linux、macOS、Windows（WSL2）等系统，包含环境依赖、快速安装、手动安装、Docker 安装等多种方式。</description><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;Hermes Agent 完整安装部署指南&lt;a href=&quot;#hermes-agent-完整安装部署指南&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Hermes Agent 是 Nous Research 推出的一款可成长的 AI Agent，主打自主学习、多层记忆架构和丰富的工具系统。这篇指南将带你从零开始完成安装部署。&lt;/p&gt;&lt;section&gt;&lt;h2&gt;项目简介&lt;a href=&quot;#项目简介&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 
 
 
