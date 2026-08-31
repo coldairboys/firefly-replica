@@ -2,7 +2,6 @@ name: Weekly AI Blog Post
 
 on:
   schedule:
-    # Every Friday at 9:00 AM CST (UTC+8) = 1:00 AM UTC
     - cron: '0 1 * * 5'
   workflow_dispatch:
     inputs:
@@ -58,8 +57,6 @@ jobs:
           $postNum = "${{ steps.postnum.outputs.number }}"
           $prompt = "根据项目博客，草拟本周GITHUB热门AI相关项目博文，并保存在 src/content/posts/${postNum}.md"
           Write-Host "Prompting DSH Agent: $prompt"
-          # Use DSH CLI in headless (non-interactive) mode to execute the task
-          # The agent will search trending repos, draft the post, and write the file
           & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" --profile headless "$prompt"
 
       - name: Commit and push
