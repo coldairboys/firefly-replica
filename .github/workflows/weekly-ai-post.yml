@@ -1,0 +1,79 @@
+name: Weekly AI Blog Post
+
+on:
+  schedule:
+    # Every Friday at 9:00 AM CST (UTC+8) = 1:00 AM UTC
+    - cron: '0 1 * * 5'
+  workflow_dispatch:
+    inputs:
+      post_number:
+        description: 'Post number (e.g. 30). Leave empty to auto-detect.'
+        required: false
+        type: string
+
+jobs:
+  draft-and-publish:
+    runs-on: [self-hosted, windows, dsh]
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify DSH CLI
+        shell: pwsh
+        run: |
+          $dshPath = "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd"
+          if (-not (Test-Path $dshPath)) {
+            Write-Error "DSH CLI not found at $dshPath"
+            exit 1
+          }
+          & $dshPath --version
+
+      - name: Determine post number
+        id: postnum
+        shell: pwsh
+        run: |
+          if ("${{ github.event.inputs.post_number }}" -ne "") {
+            $num = "${{ github.event.inputs.post_number }}"
+          } else {
+            $existing = Get-ChildItem "src\content\posts\*.md" | ForEach-Object { [int]($_.BaseName) } | Sort-Object -Descending
+            $num = ($existing[0] + 1).ToString()
+          }
+          Write-Output "number=$num" >> $env:GITHUB_OUTPUT
+          Write-Host "Post number: $num"
+
+      - name: Draft blog post via DSH Agent
+        shell: pwsh
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          $postNum = "${{ steps.postnum.outputs.number }}"
+          $prompt = "根据项目博客，草拟本周GITHUB热门AI相关项目博文，并保存在 src/content/posts/${postNum}.md"
+          Write-Host "Prompting DSH Agent: $prompt"
+          # Use DSH CLI in non-interactive mode to execute the task
+          # The agent will search trending repos, draft the post, and write the file
+          & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" run --prompt "$prompt" --yes
+
+      - name: Commit and push
+        shell: pwsh
+        run: |
+          $postNum = "${{ steps.postnum.outputs.number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "src/content/posts/${postNum}.md"
+          if (git diff --cached --quiet) {
+            Write-Host "No changes to commit"
+            exit 0
+          }
+          git commit -m "docs: 添加本周GitHub热门AI项目博文(${postNum}.md)"
+          git push
+
+</content>
