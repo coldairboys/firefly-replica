@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月3日 22:40:29</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月3日 22:55:04</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
 &lt;section&gt;&lt;h2&gt;1. 项目地址&lt;a href=&quot;#1-项目地址&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/cccoder159/astro-firefly&quot; target=&quot;_blank&quot;&gt;https://github.com/cccoder159/astro-firefly&lt;/a&gt; （如果觉得项目不错，给作者点个 ⭐ 吧！）&lt;/p&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h2&gt;2. 环境准备（小白必看）&lt;a href=&quot;#2-环境准备小白必看&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在开始之前，需要先安装两个工具：&lt;/p&gt;&lt;section&gt;&lt;h3&gt;2.1 安装 Git&lt;a href=&quot;#21-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows 用户：&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
 &lt;li&gt;访问 &lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot;&gt;https://git-scm.com/download/win&lt;/a&gt;&lt;/li&gt;
@@ -132,116 +132,7 @@
 &lt;li&gt;Source 选择 &lt;strong&gt;GitHub Actions&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;&lt;strong&gt;5. 推送代码触发部署&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;add&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;commit&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-m&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;add deploy workflow&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;push&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;等待几分钟后，你的博客就会上线：&lt;code&gt;https://你的用户名.github.io/astro-firefly&lt;/code&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方法二：手动部署&lt;a href=&quot;#方法二手动部署&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 构建项目&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装 gh-pages（如果没安装）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>31.本周 GitHub 热门 AI 开源项目盘点（2026年9月第2周）</title><link>https://blogboy.eu.cc/posts/31/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/31/</guid><description>盘点 2026 年 9 月第二周 GitHub 上最热门的 AI 相关开源项目，聚焦视频生成模型与 AI Agent 记忆系统两大方向，涵盖 Wan2.2、LTX-2、mem0、Letta、Graphiti 等热门项目。</description><pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第2周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第2周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;排名&lt;/th&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;Stars&lt;/th&gt;&lt;th&gt;语言&lt;/th&gt;&lt;th&gt;亮点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/DietrichGebert/ponytail&quot; target=&quot;_blank&quot;&gt;ponytail&lt;/a&gt;&lt;/td&gt;&lt;td&gt;114K+&lt;/td&gt;&lt;td&gt;JavaScript&lt;/td&gt;&lt;td&gt;让 AI 代理像”最懒的高级工程师”，少写代码省成本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/Wan-Video/Wan2.2&quot; target=&quot;_blank&quot;&gt;Wan2.2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;全球首个 MoE 架构视频模型，720P 消费级显卡可跑&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/Lightricks/LTX-2&quot; target=&quot;_blank&quot;&gt;LTX-2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;9.2K&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;首个开源音视频同步生成基础模型&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/mem0ai/mem0&quot; target=&quot;_blank&quot;&gt;mem0&lt;/a&gt;&lt;/td&gt;&lt;td&gt;53K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;通用 AI Agent 记忆层&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/letta-ai/letta&quot; target=&quot;_blank&quot;&gt;Letta&lt;/a&gt;&lt;/td&gt;&lt;td&gt;24K&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;原 MemGPT，OS 式自我编辑记忆框架&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/getzep/Graphiti&quot; target=&quot;_blank&quot;&gt;Graphiti&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;时间感知图记忆引擎，事实会”过期”&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🔥 重点项目详解&lt;a href=&quot;#-重点项目详解&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. ponytail — 让 AI 代理像”最懒的高级工程师”&lt;a href=&quot;#1-ponytail--让-ai-代理像最懒的高级工程师&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/DietrichGebert/ponytail&quot; target=&quot;_blank&quot;&gt;DietrichGebert/ponytail&lt;/a&gt; ⭐ 114,000+&lt;/p&gt;&lt;p&gt;Ponytail 本周稳坐 GitHub 趋势榜日榜/周榜双料冠军。它是一个 AI Agent 的”行为规则集”插件，核心理念只有一句话：&lt;strong&gt;“最好的代码是你永远不用写的代码。”&lt;/strong&gt; 它通过一条”懒惰阶梯”规则，阻止 Claude Code、Codex、Gemini CLI 等编码代理过度工程——能写一行就不写两行，能复用就不新建。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;减少约 54% 代码（复杂场景最高达 94%），成本下降约 20%，速度提升约 27%&lt;/li&gt;
-&lt;li&gt;6 级”懒惰阶梯”规则，从”不写新代码”到”最小改动”逐级收敛&lt;/li&gt;
-&lt;li&gt;适配 Claude Code / Codex / Gemini CLI / Devin 等主流代理，最近还成为 Hermes Agent 原生插件&lt;/li&gt;
-&lt;li&gt;MIT 开源协议，纯规则集，无隐藏调用&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;为什么火：&lt;/strong&gt; 当大家还在教 AI “多写点”时，Ponytail 反其道而行——给 AI 编程做减法，反而更省心、更安全、更便宜。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. Wan2.2 — 全球首个 MoE 架构视频生成模型&lt;a href=&quot;#2-wan22--全球首个-moe-架构视频生成模型&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/Wan-Video/Wan2.2&quot; target=&quot;_blank&quot;&gt;Wan-Video/Wan2.2&lt;/a&gt; ⭐ 10,000+&lt;/p&gt;&lt;p&gt;阿里通义万相开源的 Wan2.2，是首个采用 MoE（混合专家）架构的视频生成模型。相比上一代，训练数据量增加 65.6% 图像、83.2% 视频，在运动、语义和美学表现上全面提升。它一口气开源了文生视频 T2V-A14B、图生视频 I2V-A14B 和统一生成 IT2V-5B 三个模型。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;5B 高效模型支持 720P@24fps 文本/图像转视频，4090 等消费级显卡即可运行&lt;/li&gt;
-&lt;li&gt;16×16×4 高压缩比 VAE，生成速度属于开源第一梯队&lt;/li&gt;
-&lt;li&gt;Apache 2.0 协议，ComfyUI / Diffusers / 魔搭社区全生态支持&lt;/li&gt;
-&lt;li&gt;衍生出 Wan2.2-S2V（音频驱动数字人）、Wan2.2-Animate（动作生成）等系列模型&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 想低成本把 AI 视频用在内容创作、短视频生产中的个人和小团队。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. LTX-2 — 首个开源音视频同步生成基础模型&lt;a href=&quot;#3-ltx-2--首个开源音视频同步生成基础模型&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/Lightricks/LTX-2&quot; target=&quot;_blank&quot;&gt;Lightricks/LTX-2&lt;/a&gt; ⭐ 9,200+&lt;/p&gt;&lt;p&gt;Lightricks 出品的 LTX-2 是首个 DiT 架构的音视频联合生成基础模型——一次生成画面和同步声音，不需要”先出视频再配音”。采用 14B 视频流 + 5B 音频流的非对称双流 Transformer 设计，论文公开于 arXiv:2601.03233。2026 年 5 月官方开源全部权重，社区推荐使用最新的 LTX-2.5 版本。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;音画同步生成：人物口型、环境音与画面天然对齐&lt;/li&gt;
-&lt;li&gt;官方 Python 推理 + LoRA 训练包，支持深度微调&lt;/li&gt;
-&lt;li&gt;HuggingFace 累计 33M+ 下载，曾登顶 HuggingFace 趋势榜第一&lt;/li&gt;
-&lt;li&gt;ComfyUI 原生集成，官方与 NVIDIA 均提供优化工作流&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;实用价值：&lt;/strong&gt; 对创作者来说，“视频 + 声音一起出来”意味着从生成到成片的工作流大幅缩短。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. mem0 — 通用 AI Agent 记忆层&lt;a href=&quot;#4-mem0--通用-ai-agent-记忆层&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/mem0ai/mem0&quot; target=&quot;_blank&quot;&gt;mem0ai/mem0&lt;/a&gt; ⭐ 53,000+&lt;/p&gt;&lt;p&gt;Mem0 是当前最流行的 Agent 记忆解决方案之一，定位是”给 AI 加长期记忆的通用层”。它自动从对话中提取并沉淀用户偏好、历史决策，让客服机器人、AI 助手在跨会话场景下真正”记得住你”。2026 年 AI 记忆领域的头号玩家，也是目前记忆类项目里星标最高的。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;多层级记忆：同时维护用户、会话、Agent 三层状态&lt;/li&gt;
-&lt;li&gt;一行 &lt;code&gt;pip install mem0ai&lt;/code&gt; 接入，无需自建存储基础设施&lt;/li&gt;
-&lt;li&gt;基准表现：LoCoMo 92.5、LongMemEval 94.4，超过多数同赛道方案&lt;/li&gt;
-&lt;li&gt;Apache 2.0，可自托管，官方论文见 arXiv:2504.19413&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 需要个性化、跨会话上下文的应用团队——电商客服、AI 助理、个性化推荐。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. Letta — OS 式的自我编辑记忆框架&lt;a href=&quot;#5-letta--os-式的自我编辑记忆框架&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/letta-ai/letta&quot; target=&quot;_blank&quot;&gt;letta-ai/letta&lt;/a&gt; ⭐ 24,000+&lt;/p&gt;&lt;p&gt;Letta 原名 MemGPT，由 UC Berkeley Sky Computing Lab 团队打造。它把大模型当成”操作系统”来管理自己的记忆：核心上下文相当于内存，归档存储相当于磁盘，模型在每一步推理时主动决定”记什么、回忆什么、忘什么”。Agent 拥有自我编辑的记忆层级，能长期运行并持续学习。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;记忆分层：核心块 ↔ 归档存储 ↔ 召回存储，自动分页调度&lt;/li&gt;
-&lt;li&gt;Agent 自我编辑记忆，无需外部记忆 API&lt;/li&gt;
-&lt;li&gt;白盒、模型无关，可自托管在 PostgreSQL 上&lt;/li&gt;
-&lt;li&gt;最新推出 Letta Code / Agent SDK，支持记忆即 git 仓库（MemFS）跟踪&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 需要”活很久、记得住”的生产级 Agent——长期助手、客服坐席、持续学习型应用。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. Graphiti — 时间感知的图记忆引擎&lt;a href=&quot;#6-graphiti--时间感知的图记忆引擎&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/getzep/Graphiti&quot; target=&quot;_blank&quot;&gt;getzep/Graphiti&lt;/a&gt; ⭐ 20,000+&lt;/p&gt;&lt;p&gt;Graphiti 是 Zep 开源的记忆底层，思路和前面几个都不同：它把记忆建造成&lt;strong&gt;时间感知的知识图谱&lt;/strong&gt;。每条事实都带有效时间窗口，当信息发生变化时，旧事实自动失效，新事实入图。查询时一次调用同时做向量检索、全文检索和图遍历，是”事实会过期”场景下的首选。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;双时态模型：每条边记录 valid_at / invalid_at 与 created_at&lt;/li&gt;
-&lt;li&gt;增量更新，无需批量重建，事实变更自动失效旧记录&lt;/li&gt;
-&lt;li&gt;混合检索：向量 + 全文 + 图遍历合并返回，更准、更快、更省 token&lt;/li&gt;
-&lt;li&gt;已发布 MCP Server 1.0，Claude / Cursor 等客户端可直接接入&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 业务事实频繁变化的场景——CRM、招聘、金融咨询、用户画像实时更新的 Agent。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;📈 本周趋势观察&lt;a href=&quot;#-本周趋势观察&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 视频生成进入”音画一体 + 消费级硬件”时代&lt;a href=&quot;#1-视频生成进入音画一体--消费级硬件时代&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LTX-2 的音画同步、Wan2.2 在 4090 上跑 720P——开源视频生成不再只是”能生成”，而是开始”能生产”。模型参数和部署门槛同时下降，内容创作者的门槛被进一步拉低。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. Agent 记忆正在成为基础设施级组件&lt;a href=&quot;#2-agent-记忆正在成为基础设施级组件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;本周记忆方向一口气出现 mem0、Letta、Graphiti 三个重点项目，且路线各异：通用层、OS 式自管理、时间感知图谱。记忆已从”加分项”变成 Agent 架构的标准配置，“无状态 Agent”将越来越少见。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 给 AI 编程做减法成为新潮流&lt;a href=&quot;#3-给-ai-编程做减法成为新潮流&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ponytail 以 114K 星夺冠说明：社区苦”AI 过度写码”久矣。当模型越来越强，真正的成本优势反而来自”少写代码”——控制生成量、减少无效改动，正在成为新的 Agent 工程方法论。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. MCP 生态继续渗透&lt;a href=&quot;#4-mcp-生态继续渗透&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Graphiti 发布 MCP Server、Ponytail 做成多宿主插件——工具正在以标准协议接入各类 Agent 客户端。“一个记忆引擎，所有 Agent 可用”的模式会越来越常见。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🛠️ 值得一试的小工具&lt;a href=&quot;#️-值得一试的小工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;ComfyUI&lt;/td&gt;&lt;td&gt;本地 AI 生成工作台，节点式串联视频生成、放大、补帧，视频生态中枢&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/comfyanonymous/ComfyUI&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DiffSynth-Studio&lt;/td&gt;&lt;td&gt;低显存视频生成优化方案，Wan、LTX 等模型都有开箱即用工作流&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/modelscope/DiffSynth-Studio&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;agentmemory&lt;/td&gt;&lt;td&gt;轻量本地 Agent 记忆库，写入与检索不调用 LLM，纯本地零成本&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/rohitg00/agentmemory&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;本周的 GitHub AI 热榜释放出一个明确信号：&lt;strong&gt;AI 正在从”能做什么”走向”用得住、记得住、跑得动”。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;视频生成开始讲求”音画同步 + 本地部署”，Agent 开始标配”记忆系统”，编程代理开始学习”少写代码”。这些变化指向同一个方向——&lt;strong&gt;把 AI 真正变成可靠的生产工具&lt;/strong&gt;。&lt;/p&gt;&lt;p&gt;挑一个感兴趣的，动手试试吧！&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第三周，我们将关注 AI 编程 Agent 的实战玩法与 RAG / 检索增强的最新进展。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>30.本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）</title><link>https://blogboy.eu.cc/posts/30/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/30/</guid><description>盘点 2026 年 9 月第一周 GitHub 上最热门的 AI 相关开源项目，涵盖本地知识库检索、AI 代码审查、多模态 Agent、LLM 训练加速等方向。</description><pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第1周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>30.本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）</title><link>https://blogboy.eu.cc/posts/30/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/30/</guid><description>盘点 2026 年 9 月第一周 GitHub 上最热门的 AI 相关开源项目，涵盖本地知识库检索、AI 代码审查、多模态 Agent、LLM 训练加速等方向。</description><pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第1周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 
 
 
