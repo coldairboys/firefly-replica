@@ -52,7 +52,11 @@ jobs:
       - name: Draft blog post via DSH Agent
         shell: powershell
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          BAI_API_KEY: ${{ secrets.BAI_API_KEY }}
+          HTTP_PROXY: http://127.0.0.1:10808
+          HTTPS_PROXY: http://127.0.0.1:10808
+          NO_PROXY: localhost,127.0.0.1
+          NODE_USE_ENV_PROXY: "1"
         run: |
           $postNum = "${{ steps.postnum.outputs.number }}"
           $prompt = "Draft a blog post about this week's trending AI projects on GitHub, save to src/content/posts/${postNum}.md"
