@@ -1,3 +1,4 @@
+# Auto-generated workflow - do not edit manually
 name: Weekly AI Blog Post
 
 on:
@@ -55,7 +56,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           $postNum = "${{ steps.postnum.outputs.number }}"
-          $prompt = "根据项目博客，草拟本周GITHUB热门AI相关项目博文，并保存在 src/content/posts/${postNum}.md"
+          $prompt = "根据项目博客，草拟本周GITHUB热门AI相关项目博文，并保存�?src/content/posts/${postNum}.md"
           Write-Host "Prompting DSH Agent: $prompt"
           & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" --profile headless "$prompt"
 
