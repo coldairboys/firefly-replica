@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
 		googleAnalyticsId: "",
 		microsoftClarityId: "",
 		umamiAnalytics: {
-			websiteId: "",
+			websiteId: "216346f7-65fc-4c7d-8e23-7de7d5d103ff",
 			scriptUrl: "https://cloud.umami.is/script.js",
 			trackOutboundLinks: true,
 			collectWebVitals: false,
