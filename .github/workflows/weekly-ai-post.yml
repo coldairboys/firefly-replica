@@ -27,7 +27,7 @@ jobs:
           node-version: '22'
 
       - name: Verify DSH CLI
-        shell: pwsh
+        shell: powershell
         run: |
           $dshPath = "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd"
           if (-not (Test-Path $dshPath)) {
@@ -38,7 +38,7 @@ jobs:
 
       - name: Determine post number
         id: postnum
-        shell: pwsh
+        shell: powershell
         run: |
           if ("${{ github.event.inputs.post_number }}" -ne "") {
             $num = "${{ github.event.inputs.post_number }}"
@@ -50,7 +50,7 @@ jobs:
           Write-Host "Post number: $num"
 
       - name: Draft blog post via DSH Agent
-        shell: pwsh
+        shell: powershell
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
@@ -60,7 +60,7 @@ jobs:
           & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" --profile headless "$prompt"
 
       - name: Commit and push
-        shell: pwsh
+        shell: powershell
         run: |
           $postNum = "${{ steps.postnum.outputs.number }}"
           git config user.name "github-actions[bot]"
