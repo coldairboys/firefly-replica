@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月3日 10:06:30</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月3日 12:20:46</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
 &lt;section&gt;&lt;h2&gt;1. 项目地址&lt;a href=&quot;#1-项目地址&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/cccoder159/astro-firefly&quot; target=&quot;_blank&quot;&gt;https://github.com/cccoder159/astro-firefly&lt;/a&gt; （如果觉得项目不错，给作者点个 ⭐ 吧！）&lt;/p&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h2&gt;2. 环境准备（小白必看）&lt;a href=&quot;#2-环境准备小白必看&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在开始之前，需要先安装两个工具：&lt;/p&gt;&lt;section&gt;&lt;h3&gt;2.1 安装 Git&lt;a href=&quot;#21-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows 用户：&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
 &lt;li&gt;访问 &lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot;&gt;https://git-scm.com/download/win&lt;/a&gt;&lt;/li&gt;
@@ -132,7 +132,120 @@
 &lt;li&gt;Source 选择 &lt;strong&gt;GitHub Actions&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;&lt;strong&gt;5. 推送代码触发部署&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;add&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;commit&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-m&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;add deploy workflow&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;push&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;等待几分钟后，你的博客就会上线：&lt;code&gt;https://你的用户名.github.io/astro-firefly&lt;/code&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方法二：手动部署&lt;a href=&quot;#方法二手动部署&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 构建项目&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装 gh-pages（如果没安装）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>29.本周 GitHub 热门 AI 开源项目盘点（2026年8月第4周）</title><link>https://blogboy.eu.cc/posts/29/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/29/</guid><description>盘点 2026 年 8 月最后一周 GitHub 上最热门的 AI 相关开源项目，涵盖多智能体课堂、AI 爬虫、实时语音 Agent、免费 LLM API 路由等方向。</description><pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年8月第4周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年8月第4周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>30.本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）</title><link>https://blogboy.eu.cc/posts/30/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/30/</guid><description>盘点 2026 年 9 月第一周 GitHub 上最热门的 AI 相关开源项目，涵盖本地知识库检索、AI 代码审查、多模态 Agent、LLM 训练加速等方向。</description><pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第1周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;排名&lt;/th&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;Stars&lt;/th&gt;&lt;th&gt;语言&lt;/th&gt;&lt;th&gt;亮点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/khoj-ai/khoj&quot; target=&quot;_blank&quot;&gt;khoj&lt;/a&gt;&lt;/td&gt;&lt;td&gt;45K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;本地优先的 AI 第二大脑，支持语义搜索与自动化&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/chamkank/crush&quot; target=&quot;_blank&quot;&gt;crush&lt;/a&gt;&lt;/td&gt;&lt;td&gt;42K+&lt;/td&gt;&lt;td&gt;TypeScript&lt;/td&gt;&lt;td&gt;命令行 AI 代码审查助手&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/All-Hands-AI/OpenHands&quot; target=&quot;_blank&quot;&gt;OpenHands&lt;/a&gt;&lt;/td&gt;&lt;td&gt;38K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;全自动 AI 软件工程师&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/raycast/script-commands&quot; target=&quot;_blank&quot;&gt;Raycast&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11K+&lt;/td&gt;&lt;td&gt;TypeScript&lt;/td&gt;&lt;td&gt;终端脚本生态的 AI 化升级&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/mudler/LocalAI&quot; target=&quot;_blank&quot;&gt;LocalAI&lt;/a&gt;&lt;/td&gt;&lt;td&gt;30K+&lt;/td&gt;&lt;td&gt;Go&lt;/td&gt;&lt;td&gt;本地 LLM 推理与兼容层&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/langchain-ai/langgraph&quot; target=&quot;_blank&quot;&gt;LangGraph&lt;/a&gt;&lt;/td&gt;&lt;td&gt;28K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;图结构 Agent 编排框架&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🔥 重点项目详解&lt;a href=&quot;#-重点项目详解&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. khoj — 本地优先的 AI 第二大脑&lt;a href=&quot;#1-khoj--本地优先的-ai-第二大脑&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/khoj-ai/khoj&quot; target=&quot;_blank&quot;&gt;khoj-ai/khoj&lt;/a&gt; ⭐ 45,200+&lt;/p&gt;&lt;p&gt;Khoj 是一个自托管的 AI 个人知识库工具，它把笔记、文档、PDF、网页书签统一索引起来，支持语义搜索、自动问答和每日摘要。数据完全保留在本地，隐私可控，是”把 AI 用在个人知识管理”的代表项目。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;本地优先：所有索引和对话默认在本地运行，数据不出设备&lt;/li&gt;
+&lt;li&gt;多模态输入：支持 Markdown、PDF、图片、音频笔记&lt;/li&gt;
+&lt;li&gt;语义搜索 + 自动摘要：不用记住关键词，自然语言就能找到内容&lt;/li&gt;
+&lt;li&gt;跨平台客户端：桌面端、网页端、Obsidian 插件、终端均可接入&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适用场景：&lt;/strong&gt; 个人知识管理、研究笔记整理、团队内网知识库、离线环境下的大模型问答。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. crush — 命令行 AI 代码审查&lt;a href=&quot;#2-crush--命令行-ai-代码审查&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/chamkank/crush&quot; target=&quot;_blank&quot;&gt;chamkank/crush&lt;/a&gt; ⭐ 42,000+&lt;/p&gt;&lt;p&gt;Crush 是一款直接跑在终端里的 AI 代码审查工具。它把代码差异（diff）发送给大模型，返回逐行的审查意见，包括潜在 Bug、安全隐患和性能问题，不需要打开浏览器，也不需要配置复杂的 CI。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;零配置：装好后直接审查本地 Git 仓库的未提交改动&lt;/li&gt;
+&lt;li&gt;逐行意见：定位到具体行号，方便直接修改&lt;/li&gt;
+&lt;li&gt;支持 OpenAI / Anthropic / 本地 Ollama 模型&lt;/li&gt;
+&lt;li&gt;与 Git 深度集成：支持 &lt;code&gt;crush review&lt;/code&gt;、&lt;code&gt;crush fix&lt;/code&gt; 等子命令&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;为什么火：&lt;/strong&gt; 把”让 AI 审代码”的成本降到了最低——装一个 CLI，剩下的交给模型。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. OpenHands — 全自动 AI 软件工程师&lt;a href=&quot;#3-openhands--全自动-ai-软件工程师&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/All-Hands-AI/OpenHands&quot; target=&quot;_blank&quot;&gt;All-Hands-AI/OpenHands&lt;/a&gt; ⭐ 38,000+&lt;/p&gt;&lt;p&gt;OpenHands（原 OpenDevin）是一个能自动完成软件开发任务的 AI Agent 平台：给它一个 GitHub Issue，它就能自己写代码、跑测试、修 Bug、提 PR。本周它发布了新的多 Agent 协作模式，热度再次攀升。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;端到端任务执行：从理解需求到提交 PR 全程自动化&lt;/li&gt;
+&lt;li&gt;沙箱隔离：每个任务在独立 Docker 沙箱中运行，安全可控&lt;/li&gt;
+&lt;li&gt;多 Agent 分工：规划、编码、测试由不同 Agent 角色协作完成&lt;/li&gt;
+&lt;li&gt;支持接入 GitHub / GitLab / Slack 等工具链&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 想体验”AI 员工”的开发团队、研究 Agent 软件开发的研究者、以及想自动化处理简单 Issue 的个人开发者。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. Raycast Script Commands — 终端脚本生态的 AI 化&lt;a href=&quot;#4-raycast-script-commands--终端脚本生态的-ai-化&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/raycast/script-commands&quot; target=&quot;_blank&quot;&gt;raycast/script-commands&lt;/a&gt; ⭐ 11,000+&lt;/p&gt;&lt;p&gt;Raycast 的官方脚本命令仓库本周发布了大量 AI 增强脚本：用自然语言触发 Shell 命令、把 AI 回复直接渲染成操作按钮、一键让大模型改写剪贴板内容。它让”效率工具 + AI”的组合变得更顺手。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;数百个现成脚本，覆盖文件管理、系统控制、文本处理&lt;/li&gt;
+&lt;li&gt;新增 AI 动作模板：翻译、总结、重写、提取结构化数据&lt;/li&gt;
+&lt;li&gt;脚本用 TypeScript / Shell / Swift 编写，二次开发成本低&lt;/li&gt;
+&lt;li&gt;配合 Raycast AI 可在本地直接调用大模型&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;为什么火：&lt;/strong&gt; 它证明了”AI 不一定要做成聊天框”——把 AI 塞进日常操作流里，效率提升更直接。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. LocalAI — 本地 LLM 推理与兼容层&lt;a href=&quot;#5-localai--本地-llm-推理与兼容层&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/mudler/LocalAI&quot; target=&quot;_blank&quot;&gt;mudler/LocalAI&lt;/a&gt; ⭐ 30,000+&lt;/p&gt;&lt;p&gt;LocalAI 是一个开源的本地推理服务器，提供与 OpenAI API 完全兼容的接口，背后可以接 Llama、Qwen、Mistral 等任意开源模型。它无需 GPU 也能跑（支持 CPU 推理），是”把云 API 换成本地模型”的最省事方案。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;OpenAI API 兼容：改一行 base_url 即可切换&lt;/li&gt;
+&lt;li&gt;多后端支持：llama.cpp、vLLM、TensorRT 等推理引擎均可接入&lt;/li&gt;
+&lt;li&gt;支持文本、图片生成（Stable Diffusion）、语音转录&lt;/li&gt;
+&lt;li&gt;容器化部署，一条命令启动&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;实用价值：&lt;/strong&gt; 数据敏感的团队和个人可以用它把推理完全收归本地，同时保留切换回云 API 的灵活性。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. LangGraph — 图结构 Agent 编排框架&lt;a href=&quot;#6-langgraph--图结构-agent-编排框架&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/langchain-ai/langgraph&quot; target=&quot;_blank&quot;&gt;langchain-ai/langgraph&lt;/a&gt; ⭐ 28,000+&lt;/p&gt;&lt;p&gt;LangGraph 用”图”来定义 Agent 的工作流：节点是工具调用或 LLM 步骤，边是状态流转，支持循环、条件分支、人工介入等复杂编排。本周它推出的流式工具调用和持久化会话功能获得大量关注。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;显式状态机：每一步都可视、可调试、可回放&lt;/li&gt;
+&lt;li&gt;支持人机协同：关键节点可暂停等待人工确认&lt;/li&gt;
+&lt;li&gt;持久化：会话状态可保存、恢复，适合长时任务&lt;/li&gt;
+&lt;li&gt;与 LangChain 生态无缝衔接&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 需要把 Agent 工作流做成”看得懂、控得住”的生产级应用的团队。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;📈 本周趋势观察&lt;a href=&quot;#-本周趋势观察&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. “本地优先”成为新的关键词&lt;a href=&quot;#1-本地优先成为新的关键词&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;从 khoj 的本地知识库到 LocalAI 的本地推理，本周榜单上多个项目都把”数据不出本地”当作核心卖点。隐私意识加上开源模型的成熟，正在推动 AI 工具从”云端优先”转向”本地优先”。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. AI 代码工具从”补全”走向”审查”和”执行”&lt;a href=&quot;#2-ai-代码工具从补全走向审查和执行&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;crush 做代码审查、OpenHands 直接写完整个功能——AI 编程工具正在从”帮你敲代码”进化到”帮你干活”，开发者角色的重心也在从写代码转向做验收。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. 编排层的重要性上升&lt;a href=&quot;#3-编排层的重要性上升&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LangGraph 持续上榜说明：随着 Agent 越来越多，大家开始关心”怎么把多个步骤和多个 Agent 稳定地串起来”。编排框架正在成为新的基础设施层。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. 终端工具的 AI 化&lt;a href=&quot;#4-终端工具的-ai-化&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;crush 和 Raycast 脚本说明 AI 正在从”网页里的聊天框”走向开发者每天真正待着的终端。小而美的命令行 AI 工具，正在成为社区的新宠。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🛠️ 值得一试的小工具&lt;a href=&quot;#️-值得一试的小工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;gh-browse&lt;/td&gt;&lt;td&gt;GitHub CLI 扩展，用 AI 总结任意仓库的 README 和近期动态&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/example/gh-browse&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PromptLint&lt;/td&gt;&lt;td&gt;静态检查 Prompt 的规则引擎，团队统一 Prompt 风格用&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/example/promptlint&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AnyDoc2&lt;/td&gt;&lt;td&gt;把 PDF/Office 转成 Markdown 的本地命令行工具，速度快&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/example/anydoc2&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;本周的 GitHub AI 热榜释放出一个明确信号：&lt;strong&gt;AI 正在全面进入工程化的”落地周”&lt;/strong&gt;。&lt;/p&gt;&lt;p&gt;不再只是”谁家模型更强”，而是：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;怎么让 AI 在本地安全地跑起来？&lt;/li&gt;
+&lt;li&gt;怎么让 AI 真正帮我写完一个功能、审完一段代码？&lt;/li&gt;
+&lt;li&gt;怎么把多个 Agent 编排成稳定可靠的工作流？&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;这些问题的答案，就藏在上面这些项目里。挑一个感兴趣的，动手试试吧！&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第二周，我们将关注视频生成模型和 AI Agent 记忆系统的最新进展。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>29.本周 GitHub 热门 AI 开源项目盘点（2026年8月第4周）</title><link>https://blogboy.eu.cc/posts/29/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/29/</guid><description>盘点 2026 年 8 月最后一周 GitHub 上最热门的 AI 相关开源项目，涵盖多智能体课堂、AI 爬虫、实时语音 Agent、免费 LLM API 路由等方向。</description><pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年8月第4周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年8月第4周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 
 
 
