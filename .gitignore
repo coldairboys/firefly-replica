@@ -42,6 +42,9 @@ cache/
 package/
 .obsidian/
 
+# 看板娘模型（pioConfig 默认关闭；需要时再手动 add）
+public/pio/
+
 # local-only blog publish artifacts
 publish-result.txt
 *.backup-formatting
