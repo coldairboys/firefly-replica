@@ -5,10 +5,10 @@
  * 使用方法：node scripts/generate-icons.js
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-import { getIconData, iconToSVG, iconToHTML, replaceIDs } from "@iconify/utils";
+import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { getIconData, iconToHTML, iconToSVG, replaceIDs } from "@iconify/utils";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = join(__dirname, "..");
@@ -75,8 +75,7 @@ function extractIconNames(content) {
 	];
 
 	for (const pattern of patterns) {
-		let match;
-		while ((match = pattern.exec(content)) !== null) {
+		for (const match of content.matchAll(pattern)) {
 			icons.add(match[1]);
 		}
 	}
@@ -100,7 +99,12 @@ async function loadIconSet(prefix) {
 
 	try {
 		// 动态导入图标集 JSON
-		const iconSetPath = join(ROOT_DIR, "node_modules", packageName, "icons.json");
+		const iconSetPath = join(
+			ROOT_DIR,
+			"node_modules",
+			packageName,
+			"icons.json",
+		);
 		const data = JSON.parse(readFileSync(iconSetPath, "utf-8"));
 		iconSetCache.set(prefix, data);
 		return data;
@@ -262,7 +266,9 @@ async function main() {
 	writeFileSync(OUTPUT_FILE, output, "utf-8");
 
 	console.log(`\n📝 已生成: ${OUTPUT_FILE}`);
-	console.log(`📦 文件大小: ${(Buffer.byteLength(output, "utf-8") / 1024).toFixed(2)} KB\n`);
+	console.log(
+		`📦 文件大小: ${(Buffer.byteLength(output, "utf-8") / 1024).toFixed(2)} KB\n`,
+	);
 }
 
 main().catch(console.error);

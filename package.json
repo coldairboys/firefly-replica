@@ -11,8 +11,8 @@
     "astro": "astro",
     "type-check": "tsc --noEmit --isolatedDeclarations",
     "new-post": "node scripts/new-post.js",
-    "format": "biome format --write ./src",
-    "lint": "biome check --write ./src",
+    "format": "biome format --write ./src ./scripts",
+    "lint": "biome check --write ./src ./scripts",
     "preinstall": "npx only-allow pnpm",
     "icons": "node scripts/generate-icons.js"
   },

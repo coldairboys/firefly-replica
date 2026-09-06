@@ -78,7 +78,9 @@ export const isHomePage = (pathname: string): boolean => {
 };
 
 // 获取横幅偏移量
-export const getBannerOffset: (position?: string) => string = (position = "center") => {
+export const getBannerOffset: (position?: string) => string = (
+	position = "center",
+) => {
 	const bannerOffsetByPosition = {
 		top: "100vh",
 		center: "50vh",

@@ -1,8 +1,7 @@
 name: Deploy to Pages Branch
 
 on:
-  # 每次推送到 `master` 分支时触发这个"工作流程"
-  # 如果你使用了别的分支名，请按需将 `master` 替换成你的分支名
+  # 每次推送到 `main` 分支时触发这个"工作流程"
   push:
     branches: [ main ]
   # 允许你在 GitHub 上的 Actions 标签中手动触发此"工作流程"
@@ -31,7 +30,7 @@ jobs:
           run_install: false
           
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
       
       - name: Build site
         run: pnpm run build

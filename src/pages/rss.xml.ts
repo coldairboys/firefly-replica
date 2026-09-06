@@ -53,7 +53,9 @@ export async function GET(context: APIContext): Promise<Response> {
 	return rss({
 		title: siteConfig.title,
 		description: siteConfig.subtitle || "No description",
-		site: context.site ?? new URL("/", siteConfig.site_url).toString().replace(/\/$/, ""),
+		site:
+			context.site ??
+			new URL("/", siteConfig.site_url).toString().replace(/\/$/, ""),
 		customData: `<templateTheme>Firefly</templateTheme>
 		<templateThemeVersion>${pkg.version}</templateThemeVersion>
 		<templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl>
