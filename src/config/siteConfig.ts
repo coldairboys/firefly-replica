@@ -46,15 +46,10 @@ export const siteConfig: SiteConfig = {
 	outdatedThreshold: 30,
 	sharePoster: true,
 	generateOgImages: false,
-	bangumi: {
-		userId: "9182171",
-		categoryOrder: ["anime", "book", "music", "game"],
-	},
 	pages: {
 		friends: false,
 		sponsor: true,
 		guestbook: true,
-		bangumi: false,
 		gallery: false,
 	},
 	categoryBar: true,
