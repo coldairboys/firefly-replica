@@ -63,6 +63,9 @@ jobs:
           Write-Host "Prompting DSH Agent: $prompt"
           & "C:\Users\Administrator\AppData\Roaming\npm\dsh.cmd" --profile headless "$prompt"
 
+      - name: Force post to draft for review
+        run: node scripts/ensure-draft.js "${{ steps.postnum.outputs.number }}"
+
       - name: Commit and push
         shell: powershell
         run: |
@@ -74,5 +77,5 @@ jobs:
             Write-Host "No changes to commit"
             exit 0
           }
-          git commit -m "docs: add weekly AI projects blog post (${postNum}.md)"
+          git commit -m "docs: add weekly AI projects blog post draft (${postNum}.md)"
           git push
