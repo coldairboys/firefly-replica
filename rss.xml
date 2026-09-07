@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月6日 08:23:35</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coldairboy学习笔记</title><description>用来记录学习笔记与折腾记录。</description><link>https://blogboy.eu.cc/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.9.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年9月7日 10:54:30</lastBuildDate><item><title>1. 从零开始部署 Firefly（流萤）Astro 博客并上线 GitHub Pages</title><link>https://blogboy.eu.cc/posts/1/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/1/</guid><description>从零带你完成 Firefly Astro 博客的本地部署、基础配置、GitHub 上传和 GitHub Pages 上线流程。</description><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;直接给你最简可用版，照着复制粘贴就行&lt;/p&gt;
 &lt;section&gt;&lt;h2&gt;1. 项目地址&lt;a href=&quot;#1-项目地址&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/cccoder159/astro-firefly&quot; target=&quot;_blank&quot;&gt;https://github.com/cccoder159/astro-firefly&lt;/a&gt; （如果觉得项目不错，给作者点个 ⭐ 吧！）&lt;/p&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h2&gt;2. 环境准备（小白必看）&lt;a href=&quot;#2-环境准备小白必看&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在开始之前，需要先安装两个工具：&lt;/p&gt;&lt;section&gt;&lt;h3&gt;2.1 安装 Git&lt;a href=&quot;#21-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows 用户：&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
 &lt;li&gt;访问 &lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot;&gt;https://git-scm.com/download/win&lt;/a&gt;&lt;/li&gt;
@@ -132,7 +132,116 @@
 &lt;li&gt;Source 选择 &lt;strong&gt;GitHub Actions&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;&lt;strong&gt;5. 推送代码触发部署&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;add&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;commit&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-m&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;add deploy workflow&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;push&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;等待几分钟后，你的博客就会上线：&lt;code&gt;https://你的用户名.github.io/astro-firefly&lt;/code&gt;&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方法二：手动部署&lt;a href=&quot;#方法二手动部署&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 构建项目&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;build&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装 gh-pages（如果没安装）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>30.本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）</title><link>https://blogboy.eu.cc/posts/30/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/30/</guid><description>盘点 2026 年 9 月第一周 GitHub 上最热门的 AI 相关开源项目，涵盖本地知识库检索、AI 代码审查、多模态 Agent、LLM 训练加速等方向。</description><pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第1周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 部署到 GitHub Pages&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;gh-pages&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>32.本周 GitHub 热门 AI 开源项目盘点（2026年9月第3周）</title><link>https://blogboy.eu.cc/posts/32/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/32/</guid><description>盘点 2026 年 9 月第三周 GitHub 上最热门的 AI 相关开源项目，聚焦 AI 编程 Agent 实战与 RAG / 检索增强两大方向，涵盖 Cline、OpenCode、aider、RAGFlow、LightRAG、RAGAS 等热门项目。</description><pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第3周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第3周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;排名&lt;/th&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;Stars&lt;/th&gt;&lt;th&gt;语言&lt;/th&gt;&lt;th&gt;亮点&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/cline/cline&quot; target=&quot;_blank&quot;&gt;Cline&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60K+&lt;/td&gt;&lt;td&gt;TypeScript&lt;/td&gt;&lt;td&gt;VS Code 里的自主编程 Agent，Plan/Act 双模式实战标杆&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/sst/opencode&quot; target=&quot;_blank&quot;&gt;OpenCode&lt;/a&gt;&lt;/td&gt;&lt;td&gt;45K+&lt;/td&gt;&lt;td&gt;TypeScript&lt;/td&gt;&lt;td&gt;终端原生、模型无关的开源编程 Agent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/infiniflow/ragflow&quot; target=&quot;_blank&quot;&gt;RAGFlow&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;深度文档理解的开源 RAG 引擎，企业知识库首选&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/Aider-AI/aider&quot; target=&quot;_blank&quot;&gt;aider&lt;/a&gt;&lt;/td&gt;&lt;td&gt;35K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;Git 原生的终端结对编程，提交历史即工作记录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/HKUDS/LightRAG&quot; target=&quot;_blank&quot;&gt;LightRAG&lt;/a&gt;&lt;/td&gt;&lt;td&gt;30K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;港大出品，图谱增强 RAG 的轻量高性价方案&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/explodinggradients/ragas&quot; target=&quot;_blank&quot;&gt;RAGAS&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15K+&lt;/td&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;RAG 系统的”单元测试框架”，LLM 评测标准工具&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🔥 重点项目详解&lt;a href=&quot;#-重点项目详解&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. Cline — VS Code 里的自主编程 Agent&lt;a href=&quot;#1-cline--vs-code-里的自主编程-agent&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/cline/cline&quot; target=&quot;_blank&quot;&gt;cline/cline&lt;/a&gt; ⭐ 60,000+&lt;/p&gt;&lt;p&gt;Cline 是目前最流行的 IDE 内编程 Agent：在 VS Code 侧边栏里，它能读工程、改代码、跑终端命令、修报错，全程每一步都可以人工审批。本周社区热议的是它的”实战工作流”——Plan 模式先对齐方案、Act 模式再动手执行，配合检查点（Checkpoint）一键回滚，被很多人认为是”敢把 Agent 放进真实项目”的关键设计。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;Plan/Act 双模式：先讨论方案再执行，避免”上来就改”的失控感&lt;/li&gt;
+&lt;li&gt;检查点与回滚：每次修改自动建快照，改坏了随时还原&lt;/li&gt;
+&lt;li&gt;模型无关：Anthropic / OpenAI / 本地 Ollama / 任意 OpenAI 兼容端点均可&lt;/li&gt;
+&lt;li&gt;MCP 生态：官方 Marketplace 一键接入外部工具与数据源&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;实战建议：&lt;/strong&gt; 从”小步快跑”开始——一次只给一个明确任务，开启审批模式观察它的每一步操作，熟悉后再逐步放权。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. OpenCode — 终端原生的开源编程 Agent&lt;a href=&quot;#2-opencode--终端原生的开源编程-agent&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/sst/opencode&quot; target=&quot;_blank&quot;&gt;sst/opencode&lt;/a&gt; ⭐ 45,000+&lt;/p&gt;&lt;p&gt;由 SST 团队打造的 OpenCode 是终端编程 Agent 里的当红炸子鸡：纯 TUI 交互、客户端/服务器架构、750K+ 周下载量，本周还拿到了 Anthropic 与 OpenAI 模型方的公开推荐。它把 Claude Code 式的体验做成了开源、可换模型、可远程驱动的版本——Agent 跑在服务器上，你在手机、桌面或终端里随时接管会话。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;终端优先的 TUI 体验，支持会话共享与远程接管&lt;/li&gt;
+&lt;li&gt;接入 75+ 模型提供商，支持订阅账号（Claude Pro/Max、ChatGPT）直连&lt;/li&gt;
+&lt;li&gt;LSP 集成：Agent 改完代码立刻拿到语言服务器的诊断反馈&lt;/li&gt;
+&lt;li&gt;开源协议，插件与主题生态活跃&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 不想被单一厂商锁定、习惯终端工作流、需要”远程跑 Agent”的开发者。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. RAGFlow — 深度文档理解的开源 RAG 引擎&lt;a href=&quot;#3-ragflow--深度文档理解的开源-rag-引擎&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/infiniflow/ragflow&quot; target=&quot;_blank&quot;&gt;infiniflow/ragflow&lt;/a&gt; ⭐ 70,000+&lt;/p&gt;&lt;p&gt;RAGFlow 的口号是”基于深度文档理解的下一代 RAG”。它解决的是 RAG 落地最痛的一环：PDF、Word、Excel、扫描件里的表格、图片、版式怎么切分。内置多种可解释的切分模板（DeepDoc），切分结果可视化可调，答案自带原文引用，本周因 Agent 工作流与内存（Memory）功能的合入再次冲上趋势榜。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;DeepDoc 版面分析：表格、图片、正文分开解析，减少”垃圾进垃圾出”&lt;/li&gt;
+&lt;li&gt;切分过程可视化：人工干预模板，答案质量可追溯&lt;/li&gt;
+&lt;li&gt;引用溯源：每条回答标注来源片段，企业场景刚需&lt;/li&gt;
+&lt;li&gt;本周新增：Agent 工作流编排 + 多轮对话记忆，向”企业级知识中枢”演进&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 要做内部知识库、文档问答、合规检索的团队——自托管、数据不出内网。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. aider — Git 原生的终端结对编程&lt;a href=&quot;#4-aider--git-原生的终端结对编程&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/Aider-AI/aider&quot; target=&quot;_blank&quot;&gt;Aider-AI/aider&lt;/a&gt; ⭐ 35,000+&lt;/p&gt;&lt;p&gt;老牌终端编程助手 aider 依然稳居热度榜。它的哲学和重型 Agent 相反：不做全自动，而是”结对”——你描述需求，它改代码并自动生成本地 git 提交，每一步都落在版本历史里。仓库地图（Repo Map）功能让它对大项目的上下文理解始终又快又省 token。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;自动 git 提交：每次修改一个 commit，回滚就是 &lt;code&gt;git revert&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Repo Map：用 tree-sitter 索引全仓库，上下文精准且省 token&lt;/li&gt;
+&lt;li&gt;支持语音输入、图片输入（截图直接变成需求）&lt;/li&gt;
+&lt;li&gt;benchmark 套件开源，模型选型有据可依&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;实战建议：&lt;/strong&gt; 适合”你有明确想法、需要快速落地”的场景；配合弱模型跑简单任务、强模型攻复杂重构，成本可以压得很低。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;5. LightRAG — 图谱增强 RAG 的轻量方案&lt;a href=&quot;#5-lightrag--图谱增强-rag-的轻量方案&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/HKUDS/LightRAG&quot; target=&quot;_blank&quot;&gt;HKUDS/LightRAG&lt;/a&gt; ⭐ 30,000+&lt;/p&gt;&lt;p&gt;港大 HKUDS 团队的 LightRAG（EMNLP 2025 论文）本周因新版检索策略发布再度上榜。它把 GraphRAG 式的”实体关系图谱 + RAG”做轻了：抽取实体关系建图，检索时融合低层实体与高层主题两种粒度，成本只有全量 GraphRAG 的一小部分，更新增量友好，不用每次重建索引。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;图 + 向量混合检索：跨文档的”关系型问题”回答明显更稳&lt;/li&gt;
+&lt;li&gt;四种检索模式：local / global / hybrid / mix，按需选档&lt;/li&gt;
+&lt;li&gt;支持多模态：图片、表格也能入图检索&lt;/li&gt;
+&lt;li&gt;部署门槛低：几十行代码即可接入现有知识库&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;适合谁：&lt;/strong&gt; 被”传统向量 RAG 答不好关系型问题”困扰，又不想承担 GraphRAG 重建成本的团队。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;6. RAGAS — RAG 系统的”单元测试框架”&lt;a href=&quot;#6-ragas--rag-系统的单元测试框架&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;仓库：&lt;/strong&gt; &lt;a href=&quot;https://github.com/explodinggradients/ragas&quot; target=&quot;_blank&quot;&gt;explodinggradients/ragas&lt;/a&gt; ⭐ 15,000+&lt;/p&gt;&lt;p&gt;本周 RAG 榜单上最有”工程化信号”的项目。RAGAS 解决的是”我的 RAG 到底好不好”这个灵魂问题：不用人工一条条看答案，它用 LLM 自动给检索与生成打分——忠实度、答案相关性、上下文精度等指标一键产出，还能从原始文档自动生成测试数据集。本周它把无参考评估（reference-free）和 Agent 评测做进了同一套 API。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;核心特性：&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;核心指标：faithfulness / answer relevancy / context precision 开箱即用&lt;/li&gt;
+&lt;li&gt;测试集自动生成：从你的文档反向合成问答对&lt;/li&gt;
+&lt;li&gt;支持 RAG 与 Agent 两类系统的回归评测&lt;/li&gt;
+&lt;li&gt;与主流框架集成：LangChain / LlamaIndex / DeepEval 生态互通&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;实战建议：&lt;/strong&gt; 把 RAGAS 跑进 CI——每次改切分策略或换 embedding 模型，指标自动对比，调参不再靠感觉。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;📈 本周趋势观察&lt;a href=&quot;#-本周趋势观察&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;1. 编程 Agent 进入”实战方法论”阶段&lt;a href=&quot;#1-编程-agent-进入实战方法论阶段&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;工具已经够多，本周社区讨论的重心明显转向”怎么用”：Plan/Act 分离、审批模式、检查点回滚、小步任务拆分。共识正在形成——&lt;strong&gt;可控性比自动化程度更重要&lt;/strong&gt;，能随时接管、随时回滚的 Agent 才敢用在真实项目里。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;2. 终端成为编程 Agent 的主战场&lt;a href=&quot;#2-终端成为编程-agent-的主战场&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;OpenCode、aider 双双在榜，加上各家 CLI 混战：终端因为”离 git 和 shell 最近”，正在成为 Agent 工作流的最佳宿主。IDE 插件负责”看得见”，终端 Agent 负责”跑得动”。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;3. RAG 从”检索增强”走向”结构增强”&lt;a href=&quot;#3-rag-从检索增强走向结构增强&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;RAGFlow 的版面理解、LightRAG 的关系图谱，本质都是同一件事：纯向量检索的天花板已到，&lt;strong&gt;把文档结构、实体关系显式建模&lt;/strong&gt;正在成为新一代 RAG 的标配。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;4. 评测驱动（Evaluation-Driven）开始流行&lt;a href=&quot;#4-评测驱动evaluation-driven开始流行&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;RAGAS 上榜是个标志性信号：大家不再满足于”跑个 demo 感觉挺像”，而是给 RAG/Agent 建立指标、测试集和 CI 回归。AI 应用工程化，缺的从来不是模型，是”怎么证明它好用”。&lt;/p&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;🛠️ 值得一试的小工具&lt;a href=&quot;#️-值得一试的小工具&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;项目&lt;/th&gt;&lt;th&gt;简介&lt;/th&gt;&lt;th&gt;链接&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;qmd&lt;/td&gt;&lt;td&gt;本地 Markdown 笔记检索引擎，BM25+向量+LLM 重排三合一，Agent 的记忆外挂&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/tobi/qmd&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;promptfoo&lt;/td&gt;&lt;td&gt;Prompt 与 RAG 的回归测试框架，配置即测试，可跑进 CI&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/promptfoo/promptfoo&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;nano-graphrag&lt;/td&gt;&lt;td&gt;约 1100 行的极简 GraphRAG 实现，读懂图谱增强 RAG 原理的最佳教材&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://github.com/circlemind-ai/fast-graphrag&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;&lt;section&gt;&lt;h2&gt;💡 写在最后&lt;a href=&quot;#-写在最后&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;本周的两条主线拼在一起，是 AI 开源社区的一个缩影：&lt;strong&gt;编程 Agent 在学”守规矩”，RAG 在学”讲结构”。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;前者用 Plan/Act、审批、回滚换来了生产环境的信任；后者用版面解析、知识图谱、自动评测换来了答案质量的确定性。当”能跑”不再是卖点，&lt;strong&gt;可控、可查、可评估&lt;/strong&gt;才是新项目上榜的真正原因。&lt;/p&gt;&lt;p&gt;挑一个感兴趣的，动手试试吧！&lt;/p&gt;&lt;hr /&gt;&lt;blockquote&gt;&lt;p&gt;📅 下期预告：9 月第四周，我们将关注本地推理引擎与开源语音模型的最新进展。敬请关注！&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>30.本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）</title><link>https://blogboy.eu.cc/posts/30/</link><guid isPermaLink="true">https://blogboy.eu.cc/posts/30/</guid><description>盘点 2026 年 9 月第一周 GitHub 上最热门的 AI 相关开源项目，涵盖本地知识库检索、AI 代码审查、多模态 Agent、LLM 训练加速等方向。</description><pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;本周 GitHub 热门 AI 开源项目盘点（2026年9月第1周）&lt;a href=&quot;#本周-github-热门-ai-开源项目盘点2026年9月第1周&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;每周精选 GitHub 上最值得关注的 AI 开源项目，帮你快速了解社区动态和技术趋势。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;section&gt;&lt;h2&gt;📊 本周概览&lt;a href=&quot;#-本周概览&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 
 
 
