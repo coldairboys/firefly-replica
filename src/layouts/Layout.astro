@@ -136,6 +136,8 @@ const siteLang = lang.replace("_", "-");
     }
     <meta name="author" content={profileConfig.name} />
 
+    <link rel="canonical" href={new URL(Astro.url.pathname, siteConfig.site_url).href} />
+
     <meta property="og:site_name" content={siteConfig.title} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={pageTitle} />

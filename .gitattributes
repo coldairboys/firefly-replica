@@ -5,4 +5,17 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 
-</content>
+# Source files: force LF in the worktree too, so Biome's formatter sees
+# the same line endings on every platform. Without this, core.autocrlf=true
+# checks these files out as CRLF and `biome ci` fails even though git
+# reports no diff (the CRLF/LF change stays invisible to git).
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.astro text eol=lf
+*.svelte text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.html text eol=lf
