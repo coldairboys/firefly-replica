@@ -43,7 +43,7 @@ jobs:
           if ("${{ github.event.inputs.post_number }}" -ne "") {
             $num = "${{ github.event.inputs.post_number }}"
           } else {
-            $existing = Get-ChildItem "src\content\posts\*.md" | ForEach-Object { [int]($_.BaseName) } | Sort-Object -Descending
+            $existing = Get-ChildItem "src\content\posts\*.md" | Where-Object { $_.BaseName -match '^\d+$' } | ForEach-Object { [int]($_.BaseName) } | Sort-Object -Descending
             $num = ($existing[0] + 1).ToString()
           }
           Write-Output "number=$num" >> $env:GITHUB_OUTPUT

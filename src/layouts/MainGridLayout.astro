@@ -16,6 +16,7 @@ import {
 	live2dModelConfig,
 	sidebarLayoutConfig,
 	siteConfig,
+	spineModelConfig,
 } from "@/config";
 import {
 	BANNER_HEIGHT,
@@ -933,7 +934,7 @@ const bannerCarouselInterval = Math.max(
             </div>
         </div>
 
-        <SpineModel></SpineModel>
+        {spineModelConfig.enable && <SpineModel />}
         {live2dModelConfig.enable && <Live2DWidget config={live2dModelConfig} />}
     </div>
 </div>
