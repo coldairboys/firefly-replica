@@ -26,7 +26,9 @@ export async function GET(context: APIContext): Promise<Response> {
 	const renderers = await loadRenderers([getMDXRenderer()]);
 	const container = await AstroContainer.create({ renderers });
 	const feedItems: RSSFeedItem[] = [];
-	for (const post of blog) {
+	// 限制 RSS 输出最新 20 篇，控制 Feed 体积并加快构建
+	const feedPosts = blog.slice(0, 20);
+	for (const post of feedPosts) {
 		if (post.data.password) {
 			feedItems.push({
 				title: post.data.title,

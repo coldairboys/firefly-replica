@@ -3,6 +3,11 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils";
 
+let cachedSortedPosts: CollectionEntry<"posts">[] | null = null;
+let cachedTagList: Tag[] | null = null;
+let cachedCategoryList: Category[] | null = null;
+let cachedTotalWords: number | null = null;
+
 // // Retrieve posts and sort them by publication date
 async function getRawSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
@@ -23,6 +28,9 @@ async function getRawSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 }
 
 export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
+	if (import.meta.env.PROD && cachedSortedPosts) {
+		return cachedSortedPosts;
+	}
 	const sorted = await getRawSortedPosts();
 
 	for (let i = 1; i < sorted.length; i++) {
@@ -34,6 +42,7 @@ export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 		sorted[i].data.prevTitle = sorted[i + 1].data.title;
 	}
 
+	cachedSortedPosts = sorted;
 	return sorted;
 }
 export type PostForList = {
@@ -57,6 +66,9 @@ export type Tag = {
 };
 
 export async function getTagList(): Promise<Tag[]> {
+	if (import.meta.env.PROD && cachedTagList) {
+		return cachedTagList;
+	}
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
@@ -74,7 +86,9 @@ export async function getTagList(): Promise<Tag[]> {
 		return a.toLowerCase().localeCompare(b.toLowerCase());
 	});
 
-	return keys.map((key) => ({ name: key, count: countMap[key] }));
+	const result = keys.map((key) => ({ name: key, count: countMap[key] }));
+	cachedTagList = result;
+	return result;
 }
 
 export type Category = {
@@ -84,6 +98,9 @@ export type Category = {
 };
 
 export async function getCategoryList(): Promise<Category[]> {
+	if (import.meta.env.PROD && cachedCategoryList) {
+		return cachedCategoryList;
+	}
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
@@ -117,6 +134,7 @@ export async function getCategoryList(): Promise<Category[]> {
 			url: getCategoryUrl(c),
 		});
 	}
+	cachedCategoryList = ret;
 	return ret;
 }
 
@@ -239,4 +257,29 @@ export async function getRelatedPosts(
 	}
 
 	return result;
+}
+
+/**
+ * 计算全站文章总字数（构建期缓存）
+ */
+export async function getTotalWords(): Promise<number> {
+	if (import.meta.env.PROD && cachedTotalWords !== null) {
+		return cachedTotalWords;
+	}
+	const posts = await getSortedPosts();
+	let total = 0;
+	for (const post of posts) {
+		if (post.body) {
+			const text = post.body
+				.replace(/\x60\x60\x60[\s\S]*?\x60\x60\x60/g, "")
+				.replace(/\x60[^\x60]*\x60/g, "")
+				.replace(/\s+/g, " ")
+				.trim();
+			const chineseChars = text.match(/[\u4e00-\u9fa5]/g) || [];
+			const englishChars = text.match(/[a-zA-Z]/g) || [];
+			total += chineseChars.length + englishChars.length;
+		}
+	}
+	cachedTotalWords = total;
+	return total;
 }

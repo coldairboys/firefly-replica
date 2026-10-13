@@ -252,7 +252,7 @@ html {
         background-color: var(--card-bg-transparent) !important;
     }
     
-    h1, h2, h3, h4, h5, h6, p, a, span, li, ul, ol, blockquote, code, pre, table, th, td, strong {
+    h1, h2, h3, h4, h5, h6, p, a, blockquote {
         @apply transition-colors duration-150;
     }
     .card-shadow {

@@ -69,12 +69,10 @@ Firefly 项目中所有可复用组件的集中管理。组件按照功能和职
 - `Announcement.astro` - 公告组件
 - `Calendar.astro` - 日历组件
 - `Categories.astro` - 分类组件
-- `Live2DWidget.astro` - Live2D 看板娘组件
 - `Music.astro` - 音乐播放器小部件
 - `Profile.astro` - 个人信息/社交链接小部件
 - `SidebarTOC.astro` - 侧边栏目录组件
 - `SiteStats.astro` - 站点统计组件
-- `SpineModel.astro` - Spine 看板娘组件
 - `Tags.astro` - 标签组件
 
 ### ✨ features/ - 全局功能特效组件
@@ -100,11 +98,6 @@ Firefly 项目中所有可复用组件的集中管理。组件按照功能和职
 
 - `AdvancedSearch.svelte` - 高级搜索组件
 
-**pages/bangumi/** - 番组计划页面组件
-- `BangumiSection.astro` - 番组分类展示组件
-- `Card.astro` - 番组卡片组件
-- `FilterControls.astro` - 筛选控制组件
-- `TabNav.astro` - 标签导航组件
 
 ### 💬 comment/ - 评论系统组件
 

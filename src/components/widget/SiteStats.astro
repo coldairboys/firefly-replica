@@ -8,6 +8,7 @@ import {
 	getCategoryList,
 	getSortedPosts,
 	getTagList,
+	getTotalWords,
 } from "@/utils/content-utils";
 
 interface Props {
@@ -25,24 +26,8 @@ const posts = await getSortedPosts();
 const categories = await getCategoryList();
 const tags = await getTagList();
 
-// 计算总字数
-let totalWords = 0;
-for (const post of posts) {
-	if (post.body) {
-		// 移除代码块和内联代码后计算字数
-		let text = post.body
-			.replace(/```[\s\S]*?```/g, "") // 移除代码块
-			.replace(/`[^`]*`/g, "") // 移除内联代码
-			.replace(/\s+/g, " ") // 合并空白
-			.trim();
-
-		// 分别计算中文字符和英文字符
-		const chineseChars = text.match(/[\u4e00-\u9fa5]/g) || [];
-		const englishChars = text.match(/[a-zA-Z]/g) || [];
-
-		totalWords += chineseChars.length + englishChars.length;
-	}
-}
+// 计算总字数（使用构建期缓存）
+const totalWords = await getTotalWords();
 
 // 格式化数字（添加千位分隔符）
 function formatNumber(num: number): string {

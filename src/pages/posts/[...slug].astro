@@ -58,6 +58,11 @@ const bannerPostMeta = {
 const processedImage = processCoverImageSync(entry.data.image, entry.id);
 const apiUrls = getApiUrlList(entry.data.image, entry.id);
 
+const localImageFiles = import.meta.glob<ImageMetadata>(
+	"../../**/*.{png,jpg,jpeg,webp,avif}",
+	{ import: "default" },
+);
+
 let posterCoverUrl = processedImage;
 if (processedImage) {
 	const isLocal = !(
@@ -68,13 +73,10 @@ if (processedImage) {
 	);
 	if (isLocal) {
 		const basePath = getFileDirFromPath(entry.filePath || "");
-		const files = import.meta.glob<ImageMetadata>("../../**", {
-			import: "default",
-		});
 		let normalizedPath = path
 			.normalize(path.join("../../", basePath, processedImage))
 			.replace(/\\/g, "/");
-		const file = files[normalizedPath];
+		const file = localImageFiles[normalizedPath];
 		if (file) {
 			const img = await file();
 			posterCoverUrl = img.src;
@@ -92,13 +94,10 @@ if (posterAvatarUrl) {
 		posterAvatarUrl.startsWith("data:")
 	);
 	if (isLocalAvatar) {
-		const files = import.meta.glob<ImageMetadata>("../../**", {
-			import: "default",
-		});
 		const normalizedPath = path
 			.normalize(path.join("../../", posterAvatarUrl))
 			.replace(/\\/g, "/");
-		const file = files[normalizedPath];
+		const file = localImageFiles[normalizedPath];
 		if (file) {
 			const img = await file();
 			posterAvatarUrl = img.src;

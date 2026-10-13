@@ -17,4 +17,4 @@ jobs:
         with:
           version: 2.4.12 # 与 package.json devDependencies 保持一致
       - name: Run Biome
-        run: biome ci ./src ./scripts --reporter=github
+        run: biome ci ./src ./scripts ./tests --reporter=github
