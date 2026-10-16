@@ -337,6 +337,16 @@ const POST_METAS = {
 		gradient:
 			"radial-gradient(circle at 85% 18%, rgba(16, 185, 129, 0.22) 0%, transparent 45%), radial-gradient(circle at 12% 82%, rgba(20, 184, 166, 0.16) 0%, transparent 45%)",
 	},
+	33: {
+		category: "GitHub周刊",
+		subCategory: "WEEKLY",
+		cleanTitle: "本周 GitHub 热门 AI 开源项目盘点（10月第3周）",
+		keywords: ["# Browser Use", "# Docling", "# 端侧推理微调"],
+		series: "GitHub 趋势雷达 · 周刊专栏",
+		badgeColor: "#10b981",
+		gradient:
+			"radial-gradient(circle at 85% 18%, rgba(16, 185, 129, 0.22) 0%, transparent 45%), radial-gradient(circle at 12% 82%, rgba(20, 184, 166, 0.16) 0%, transparent 45%)",
+	},
 };
 
 async function renderCard(id, date) {
