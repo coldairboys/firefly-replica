@@ -249,8 +249,9 @@ export default defineConfig({
 			minify: "esbuild",
 			esbuildOptions: {
 				minify: true,
-				// 移除 console.log 和 debugger
-				drop: ["console", "debugger"],
+				// 只移除调试用的 console 与 debugger，保留 warn/error 便于线上排查
+				pure: ["console.log", "console.debug", "console.trace"],
+				drop: ["debugger"],
 			},
 			rollupOptions: {
 				onwarn(warning, warn) {
